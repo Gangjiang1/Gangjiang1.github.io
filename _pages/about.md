@@ -15,7 +15,10 @@ redirect_from:
 
 🧏🏻‍♂️ I'm a final-year PhD candidate at The University of Utah, expecting to graduate in June 2026, and **I'm open to work**.
 
-🔬 My research interests lie in 🤖 **AI & LLM for Building**, ⚙️ **Physics-Informed Machine Learning**, and 🏙 **Building Energy Modeling & Calibration**.
+🔬 My research interests:
+🤖 **AI & LLM for Building**
+⚙️ **Physics-Informed Machine Learning**
+🏙 **Building Energy Modeling & Calibration**.
 
 📌 I'm currently developing **auto-building energy modeling (ABEM) using LLMs** to improve **modeling accessibility & scalability**.
 
