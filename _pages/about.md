@@ -11,7 +11,7 @@ redirect_from:
 
 
 
-![Illustration of AI in building](/images/jg photo.png){: .align-right width="300px"}
+![Illustration of AI in building](/images/jg_photo.png){: .align-right width="300px"}
 
 🧏🏻‍♂️ I'm a final-year PhD candidate at The University of Utah, expecting to graduate in June 2026, and **I'm open to work**.
 
