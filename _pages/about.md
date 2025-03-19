@@ -25,11 +25,11 @@ redirect_from:
 [Prompting LLMs for ABEM](https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling): A comprehensive guideline for prompt engineering of LLMs in building modeling.
 
 ## 👨🏻‍🔬 Experience
-🧪 As part of my PhD journey, I am working with Dr. Jianli Chen on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimization, and AI Applications in Buildings. \
+🧪 As part of my PhD journey, I am working with Dr. Jianli Chen on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimization, and AI Applications in Buildings.
 
-🧫 During my Master’s degree, I collaborated with Dr. Zhe Tian on NSF-China projects related to Building Energy System Simulation and Building Fault Detection & Diagnosis. \
+🧫 During my Master’s degree, I collaborated with Dr. Zhe Tian on NSF-China projects related to Building Energy System Simulation and Building Fault Detection & Diagnosis.
 
-✍️ I have completed internships at AWS, where I gained experience in data center design and operation, and at SUNAC, where I worked in real estate management. \
+✍️ I have completed internships at AWS, where I gained experience in data center design and operation, and at SUNAC, where I worked in real estate management.
 
 ## 🎉 News
 📢 Mar. 2024 – I will be speaking at the ASHRAE Annual Conference in Indianapolis, Indiana.
