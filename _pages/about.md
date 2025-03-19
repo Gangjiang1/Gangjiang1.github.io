@@ -17,7 +17,7 @@ redirect_from:
 
 🔬 My research interests lie in 🤖 **AI & LLM for Building**, ⚙️ **Physics-Informed Machine Learning**, and 🏙 **Building Energy Modeling & Calibration**.
 
-📌 I'm currently developing **auto-building energy modeling (ABEM) using LLMs** to improve **modeling accessibility & scalability**.{: .align-right width="400px"}
+📌 I'm currently developing **auto-building energy modeling (ABEM) using LLMs** to improve **modeling accessibility & scalability**.
 
 ## 🤖 Open-sourced Models and codes 
 [EPlus-LLM](https://github.com/EPlus-LLM/Model): A large open-sourced LLM for auto-building energy modeling.
