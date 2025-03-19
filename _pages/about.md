@@ -19,7 +19,7 @@ redirect_from:
 
 📌 I'm currently developing **auto-building energy modeling (ABEM) using LLMs** to improve **modeling accessibility & scalability**.
 
-## 🤖 Open-sourced Models and codes 
+## 🤖 Open-source Contribution
 [EPlus-LLM](https://github.com/EPlus-LLM/Model): A large open-sourced LLM for auto-building energy modeling.
 
 [Prompting LLMs for ABEM](https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling): A comprehensive guideline for prompt engineering of LLMs in building modeling.
