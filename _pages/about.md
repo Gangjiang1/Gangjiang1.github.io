@@ -11,24 +11,27 @@ redirect_from:
 
 
 
-![Illustration of AI in building](/images/graphic.png){: .align-right width="300px"}
+![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="400px"}
 
 🧏🏻‍♂️ I'm a final-year PhD candidate at The University of Utah, expecting to graduate in June 2026, and **I'm open to work**.
 
 🔬 My research interests lie in 🤖 **AI & LLM for Building**, ⚙️ **Physics-Informed Machine Learning**, and 🏙 **Building Energy Modeling & Calibration**.
 
-📌 I'm currently developing **auto-building energy modeling using LLMs** to improve **modeling accessibility & scalability**.
+📌 I'm currently developing **auto-building energy modeling (ABEM) using LLMs** to improve **modeling accessibility & scalability**.{: .align-right width="400px"}
 
-## 🤖 Open-sourced Models and codes
-[EPlus-LLM](https://github.com/Arena-Rosnav): A large open-sourced LLM for auto-building energy modeling.
+## 🤖 Open-sourced Models and codes 
+[EPlus-LLM](https://github.com/EPlus-LLM/Model): A large open-sourced LLM for auto-building energy modeling.
 
-[Guidelines for prompting LLMs in building modeling](https://sudo-boris.github.io/publication/2022-Arena-Bench): A comprehensive test of LLMs in building modeling.
+[Prompting LLMs for ABEM](https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling): A comprehensive guideline for prompt engineering of LLMs in building modeling.
 
 ## 👨🏻‍🔬 Experience
-Currently I am working as a **Student Researcher** at the Reliable Multimodal AI Lab at the TU Darmstadt under the supervision of Prof. Marcus Rohrbach working on **Generative Video-Language Modelling**.
-Additionally, I have professional experience working as an **Applied Machine Learning Student Researcher** at the Fraunhofer Heinrich Hertz Institute. \
-There I worked on dynamic traffic flow forecasting using Graph Neural Networks.
+🧪 As part of my PhD journey, I am working with Dr. Jianli Chen on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimization, and AI Applications in Buildings. \
 
-## 📚 News
-Mar. 2024. Indianapolis, Indiana, I am a speaker at the ASHRAE annual conference. 
-Mar. 2024. A new research paper, “xxx.” was published on Applied Energy.
+🧫 During my Master’s degree, I collaborated with Dr. Zhe Tian on NSF-China projects related to Building Energy System Simulation and Building Fault Detection & Diagnosis. \
+
+✍️ I have completed internships at AWS, where I gained experience in data center design and operation, and at SUNAC, where I worked in real estate management. \
+
+## 🎉 News
+📢 Mar. 2024 – I will be speaking at the ASHRAE Annual Conference in Indianapolis, Indiana.
+
+📄 Mar. 2024 – My new research paper, "EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling," has been published in Applied Energy.
