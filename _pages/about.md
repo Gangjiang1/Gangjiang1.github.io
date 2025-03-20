@@ -23,7 +23,7 @@ redirect_from:
 📌 I'm currently developing **auto-building energy modeling (ABEM) using LLMs** to improve **modeling accessibility & scalability**.
 
 ## 🖇 Open-Source Contributions
-[EPlus-LLM](https://github.com/EPlus-LLM/Model): A large-scale open-source LLM for auto-building energy modeling.
+[EPlus-LLM](https://github.com/EPlus-LLM/Model): A large-scale LLM for auto-building energy modeling.
 
 [Prompting LLMs for ABEM](https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling): A comprehensive guideline for prompt engineering of LLMs in building modeling.
 
@@ -32,7 +32,7 @@ redirect_from:
 
 🧫 During my Master’s degree, I collaborated with [Dr. Zhe Tian](https://www.researchgate.net/profile/Zhe-Tian-2) on NSF-China projects related to Building Energy System Simulation and Building Fault Detection & Diagnosis.
 
-✍️ I have completed internships at [Amazon AWS](https://aws.amazon.com/), where I gained experience in data center design and operation, and at [SUNAC](https://www.sunac.com.cn/en/about.aspx), where I worked in real estate management.
+✍️ I have completed internships at [Amazon AWS](https://aws.amazon.com/), where I have gained experience in designing and operating data centers with a focus on enhancing resilience and scalability, and at [SUNAC](https://www.sunac.com.cn/en/about.aspx), where I worked in real estate management.
 
 ## 🎉 News
 📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona, and hope to speak there. Happy to engage in discussions and make connections!!!
