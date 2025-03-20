@@ -23,19 +23,19 @@ redirect_from:
 📌 I'm currently developing **auto-building energy modeling (ABEM) using LLMs** to improve **modeling accessibility & scalability**.
 
 ## 🖇 Open-Source Contributions
-[EPlus-LLM](https://github.com/EPlus-LLM/Model): A large open-sourced LLM for auto-building energy modeling.
+[EPlus-LLM](https://github.com/EPlus-LLM/Model): A large-scale open-source LLM for auto-building energy modeling.
 
 [Prompting LLMs for ABEM](https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling): A comprehensive guideline for prompt engineering of LLMs in building modeling.
 
 ## 🔬 Experience
-🧪 As part of my PhD journey, I am working with Dr. Jianli Chen on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimization, and AI Applications in Buildings.
+🧪 As part of my PhD journey, I am working with [Dr. Jianli Chen](https://scholar.google.com/citations?user=Y0ycryUAAAAJ&hl=en) on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimization, and AI Applications in Buildings.
 
-🧫 During my Master’s degree, I collaborated with Dr. Zhe Tian on NSF-China projects related to Building Energy System Simulation and Building Fault Detection & Diagnosis.
+🧫 During my Master’s degree, I collaborated with [Dr. Zhe Tian](https://www.researchgate.net/profile/Zhe-Tian-2) on NSF-China projects related to Building Energy System Simulation and Building Fault Detection & Diagnosis.
 
-✍️ I have completed internships at AWS, where I gained experience in data center design and operation, and at SUNAC, where I worked in real estate management.
+✍️ I have completed internships at [Amazon AWS](https://aws.amazon.com/), where I gained experience in data center design and operation, and at [SUNAC](https://www.sunac.com.cn/en/about.aspx), where I worked in real estate management.
 
 ## 🎉 News
-📢 Jun. 2025 – I will be attending and speaking at the **ASHRAE Annual Conference** in *Phoenix, Arizona*. Happy to engage in discussions and make connections!!!
+📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona, and hope to speak there. Happy to engage in discussions and make connections!!!
 
 📄 Jan. 2025 – Our review paper, [A Review of Physics-Informed Machine Learning for Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.125169), has been published in *Applied Energy*.
 
@@ -43,6 +43,6 @@ redirect_from:
 
 📄 Jun. 2024 – My first-authored paper, [A Deep Learning-Based Bayesian Framework for High-Resolution Calibration of Building Energy Models](https://doi.org/10.1016/j.enbuild.2024.114755), has been published in *Energy & Buildings*.
 
-📢 Jun. 2024 – I will be speaking about [Fine-tuning LLMs for Auto-Modeling]([https://github.com/EPlus-LLM/Model](https://www.proquest.com/openview/390f54178cb137415c002b116d3ffe2c/1?pq-origsite=gscholar&cbl=34619)) at the **ASHRAE Annual Conference** in *Indianapolis, Indiana*.
+📢 Jun. 2024 – I will be speaking about [Fine-tuning LLMs for Auto-Modeling](https://www.proquest.com/openview/390f54178cb137415c002b116d3ffe2c/1?pq-origsite=gscholar&cbl=34619) at the *ASHRAE Annual Conference* in Indianapolis, Indiana.
 
 📄 May. 2024 – My first-authored paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), has been published in *Applied Energy*.
