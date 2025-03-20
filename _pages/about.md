@@ -15,7 +15,7 @@ redirect_from:
 
 👨🏻‍💻 I'm a final-year PhD candidate at The University of Utah, expecting to graduate in June 2026, and **I'm open to work**.
 
-🔬 My research interests:
+📍 My research interests:
   - 🤖 **AI & LLM for Building**
   - ⚙️ **Physics-Informed Modeling**
   - 🏙 **Building Energy Modeling & Calibration**.
