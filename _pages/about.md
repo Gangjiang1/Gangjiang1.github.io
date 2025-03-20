@@ -11,9 +11,9 @@ redirect_from:
 
 
 
-![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="400px"}
+![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="420px"}
 
-👨🏻‍💻 I'm a final-year PhD candidate at The University of Utah, expecting to graduate in June 2026, and **I'm open to work**.
+👨🏻‍💻 I'm a final-year PhD candidate at The University of Utah, expecting to graduate in Jun. 2026.
 
 📍 My research interests:
   - 🤖 **AI & LLM for Building**
