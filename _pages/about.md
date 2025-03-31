@@ -47,4 +47,4 @@ redirect_from:
 
 📄 May. 2024 – My first-authored paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), has been published in *Applied Energy*.
 
-## 👀 ![Profile Views](https://komarev.com/ghpvc/?username=Gangjiang1&color=blue)
+## 👀 ![Profile Views](https://komarev.com/ghpvc/?username=Gangjiang1&color=blue&base=1000&abbreviated=true)
