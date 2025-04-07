@@ -35,7 +35,7 @@ redirect_from:
 ✍️ I have completed internships at [Amazon AWS](https://aws.amazon.com/), where I have gained experience in designing and operating data centers with a focus on enhancing resilience and scalability, and at [SUNAC](https://www.sunac.com.cn/en/about.aspx), where I worked in real estate management.
 
 ## 🎉 News
-📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona, and hope to speak there. Happy to engage in discussions and make connections!!!
+📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona. I am happy to engage in discussions and make connections!
 
 📄 Jan. 2025 – Our review paper, [A Review of Physics-Informed Machine Learning for Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.125169), has been published in *Applied Energy*.
 
