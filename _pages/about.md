@@ -23,7 +23,7 @@ redirect_from:
 📌 I'm currently developing **auto-building energy modeling (ABEM) using large language models (LLMs)** to improve **modeling accessibility & scalability**.
 
 ## 🖇 Open-Source Contributions
-[EPlus-LLM](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.
+[EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.
 
 [Prompting LLMs for ABEM](https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling): A comprehensive guideline for prompt engineering of LLMs in auto-building energy modeling.
 
