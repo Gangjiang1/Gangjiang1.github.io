@@ -36,7 +36,6 @@ I am open to work, including **_AP track, PostDoc, and industry research positio
 ✍️ I have completed internships at [Amazon AWS](https://aws.amazon.com/), where I have gained experience in designing and operating data centers with a focus on enhancing resilience and scalability, and at [SUNAC](https://www.sunac.com.cn/en/about.aspx), where I worked in real estate management.
 
 ## 🎉 News
-📢 Jun-Aug. 2025 – I will be joining *Oak Ridge National Lab (ORNL)* as a summer intern. I look forward to meeting new people and learning new skills!
 
 📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona. I am happy to engage in discussions and make connections!
 
