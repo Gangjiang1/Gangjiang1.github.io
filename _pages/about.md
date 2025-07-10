@@ -37,6 +37,8 @@ I am open to work, including **_AP track, PostDoc, and industry research positio
 
 ## 🎉 News
 
+📢 Jun. 2025 – I will speak at *ASHRAE CIDCO Conference* in Denver, Co!
+
 📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona. I am happy to engage in discussions and make connections!
 
 📄 Apr. 2025 – The paper related to the [EPlus-LLMv2 platform](https://doi.org/10.1016/j.autcon.2025.106223), has been accepted for publication in *Automation in Construction*.
