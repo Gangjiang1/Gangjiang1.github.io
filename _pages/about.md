@@ -19,7 +19,7 @@ I am open to work, including **_AP track, PostDoc, and industry research positio
 📍 My research interests:
   - 🤖 **AI & LLM for Building**
   - ⚙️ **Physics-Informed Modeling**
-  - 🏙 **Building Energy Modeling & Calibration**.
+  - 🏙 **(Urban) Building Energy Modeling & Calibration**.
 
 📌 I'm currently developing **auto-building energy modeling (ABEM) using large language models (LLMs)** to improve **modeling accessibility & scalability**.
 
