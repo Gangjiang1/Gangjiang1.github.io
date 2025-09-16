@@ -9,19 +9,88 @@ redirect_from:
 ---
 
 
+<style>
+#llm-token-box {
+  font-family: monospace;
+  background-color: #0d1117;
+  color: #d1d5da;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  white-space: pre-wrap;
+  position: relative;
+  min-height: 200px;
+}
 
+#start-btn {
+  margin-top: 10px;
+  padding: 6px 14px;
+  background-color: #238636;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
 
-![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="420px"}
+.cursor {
+  display: inline-block;
+  width: 8px;
+  background-color: #d1d5da;
+  animation: blink 1s steps(1) infinite;
+  vertical-align: bottom;
+  margin-left: 4px;
+}
 
-👨🏻‍💻 I'm a third-year PhD candidate at The University of Utah, expecting to graduate in June 2026.  
-I am open to work, including **_AP track, PostDoc, and industry research positions_**. Please feel free to reach out!
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+</style>
 
-📍 My research interests:
-  - 🤖 **AI & LLM for Building**
-  - ⚙️ **Physics-Informed Modeling**
-  - 🏙 **(Urban) Building Energy Modeling & Calibration**.
+<div id="llm-token-box"><em>Click "Start LLM Tokens" to begin...</em></div>
+<button id="start-btn">▶️ Start LLM Tokens</button>
 
-📌 I'm currently developing **auto-building energy modeling (ABEM) using large language models (LLMs)** to improve **modeling accessibility & scalability**.
+<script>
+const tokens = [
+  '> token_1: 👋🏼 hello_world',
+  '> token_2: identify("Gang Jiang")',
+  '> token_3: role("PhD Candidate", university="University of Utah", year="2026")',
+  '> token_4: seeking(["AP track", "PostDoc", "Research (Industry)"])',
+  '> token_5: current_research := LLMs ⨉ Building Modeling',
+  '> token_6: goals := [accessibility, scalability, automation]',
+  '> token_7: interests += [🤖 AI_for_Buildings, ⚙️ Physics_Informed_Models, 🏙 Urban_BEM_and_Calibration]',
+  '> token_8: message("Feel free to connect!")'
+];
+
+const box = document.getElementById("llm-token-box");
+const btn = document.getElementById("start-btn");
+
+let index = 0;
+
+function printToken() {
+  if (index < tokens.length) {
+    const line = document.createElement("div");
+    line.textContent = tokens[index];
+    const cursor = document.createElement("span");
+    cursor.className = "cursor";
+    line.appendChild(cursor);
+    box.appendChild(line);
+    index++;
+
+    setTimeout(() => {
+      cursor.remove();
+      printToken();
+    }, 600); // speed control
+  }
+}
+
+btn.addEventListener("click", () => {
+  box.innerHTML = ""; // Clear existing
+  index = 0;
+  printToken();
+});
+</script>
 
 ## 🖇 Open-Source Contributions
 [EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.
