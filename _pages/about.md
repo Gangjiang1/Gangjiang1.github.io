@@ -8,9 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-
 <style>
-#llm-token-box {
+#llm-typewriter {
   font-family: monospace;
   background-color: #0d1117;
   color: #d1d5da;
@@ -18,19 +17,9 @@ redirect_from:
   border-radius: 10px;
   font-size: 14px;
   white-space: pre-wrap;
+  line-height: 1.6;
+  min-height: 240px;
   position: relative;
-  min-height: 200px;
-}
-
-#start-btn {
-  margin-top: 10px;
-  padding: 6px 14px;
-  background-color: #238636;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-family: sans-serif;
-  cursor: pointer;
 }
 
 .cursor {
@@ -39,7 +28,7 @@ redirect_from:
   background-color: #d1d5da;
   animation: blink 1s steps(1) infinite;
   vertical-align: bottom;
-  margin-left: 4px;
+  margin-left: 2px;
 }
 
 @keyframes blink {
@@ -48,48 +37,37 @@ redirect_from:
 }
 </style>
 
-<div id="llm-token-box"><em>Click "Start LLM Tokens" to begin...</em></div>
-<button id="start-btn">▶️ Start LLM Tokens</button>
+<div id="llm-typewriter"></div>
 
 <script>
-const tokens = [
-  '> token_1: 👋🏼 hello_world',
-  '> token_2: identify("Gang Jiang")',
-  '> token_3: role("PhD Candidate", university="University of Utah", year="2026")',
-  '> token_4: seeking(["AP track", "PostDoc", "Research (Industry)"])',
-  '> token_5: current_research := LLMs ⨉ Building Modeling',
-  '> token_6: goals := [accessibility, scalability, automation]',
-  '> token_7: interests += [🤖 AI_for_Buildings, ⚙️ Physics_Informed_Models, 🏙 Urban_BEM_and_Calibration]',
-  '> token_8: message("Feel free to connect!")'
-];
+const text = `
+> token_1: 👋🏼 hello_world
+> token_2: identify("Gang Jiang")
+> token_3: role("PhD Candidate", university="University of Utah", year="2026")
+> token_4: seeking(["AP track", "PostDoc", "Research (Industry)"])
+> token_5: current_research := LLMs ⨉ Building Modeling
+> token_6: goals := [accessibility, scalability, automation]
+> token_7: interests += [🤖 AI_for_Buildings, ⚙️ Physics_Informed_Models, 🏙 Urban_BEM_and_Calibration]
+> token_8: message("Feel free to connect!")
+`;
 
-const box = document.getElementById("llm-token-box");
-const btn = document.getElementById("start-btn");
+const container = document.getElementById("llm-typewriter");
+const cursor = document.createElement("span");
+cursor.classList.add("cursor");
+container.appendChild(cursor);
 
-let index = 0;
+let i = 0;
 
-function printToken() {
-  if (index < tokens.length) {
-    const line = document.createElement("div");
-    line.textContent = tokens[index];
-    const cursor = document.createElement("span");
-    cursor.className = "cursor";
-    line.appendChild(cursor);
-    box.appendChild(line);
-    index++;
-
-    setTimeout(() => {
-      cursor.remove();
-      printToken();
-    }, 600); // speed control
+function type() {
+  if (i < text.length) {
+    const char = text[i];
+    cursor.insertAdjacentText("beforebegin", char);
+    i++;
+    setTimeout(type, char === "\n" ? 200 : 20); // newline slower
   }
 }
 
-btn.addEventListener("click", () => {
-  box.innerHTML = ""; // Clear existing
-  index = 0;
-  printToken();
-});
+window.onload = () => setTimeout(type, 500);  // delay start slightly
 </script>
 
 ## 🖇 Open-Source Contributions
