@@ -75,7 +75,7 @@ redirect_from:
   position: relative;
   display:block;
   font-variant-ligatures:none;
-  white-space: pre;
+  white-space: pre-wrap; /* <-- 允许换行 */
   overflow: hidden;
   width: 0ch;
   border-right: 2px solid var(--fg);  /* 初始光标 */
