@@ -59,24 +59,25 @@ redirect_from:
   position: relative;
   display:block;
   font-variant-ligatures:none;
-  white-space: pre;          /* 精准按字符宽度计算 */
+  white-space: pre;
   overflow: hidden;
-  width: 0ch;               /* 从 0 个字符开始 */
-  border-right: 2px solid var(--fg);  /* 光标 */
-  /* 两个动画：typing 为逐字，caret 为光标闪烁 */
-  animation: typing var(--dur) steps(var(--n)) forwards,
-             caret 1s steps(1) infinite;
+  width: 0ch;
+  border-right: 2px solid var(--fg);  /* 初始光标 */
+  animation: 
+    typing var(--dur) steps(var(--n)) forwards,
+    caret var(--dur) steps(1) forwards; /* caret 和 typing 同步，结束后停止 */
   animation-delay: var(--delay), var(--delay);
 }
 .type-line::before{
   content: attr(data-text);
 }
 
-/* 光标闪烁 */
+/* 光标动画：typing 过程中闪烁，结束后变透明（隐藏） */
 @keyframes caret {
-  0%,49%  { border-right-color: var(--fg); }
-  50%,100%{ border-right-color: transparent; }
+  0%, 49%  { border-right-color: var(--fg); }
+  50%, 100%{ border-right-color: transparent; }
 }
+
 /* 逐字动画：增长到 n 个字符宽 */
 @keyframes typing {
   from { width: 0ch; }
@@ -87,7 +88,7 @@ redirect_from:
 :root{ color-scheme: dark; }
 </style>
 
-![Illustration of LLM for Auto-building modeling](/images/graphic.png)
+![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="420px"}
 
 ## 🖇 Open-Source Contributions
 [EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.
