@@ -20,13 +20,21 @@ redirect_from:
        style="--n:15; --dur:calc(var(--n)*0.035s); --delay:0s;"></div>
 
   <!-- line 2 -->
-  <div class="type-line" data-text="👨🏻‍💻 I'm a third-year PhD candidate at The University of Utah, expecting to graduate in June 2026." 
+  <div class="type-line" data-text="👨🏻‍💻 I'm a third-year PhD candidate at The University of Utah, expecting to graduate in" 
+       style="--n:113; --dur:calc(var(--n)*0.035s); --delay:0.825s;"></div>
+       
+  <!-- line 2.5 -->
+  <div class="type-line" data-text="June 2026." 
        style="--n:113; --dur:calc(var(--n)*0.035s); --delay:0.825s;"></div>
 
   <!-- line 3 -->
-  <div class="type-line" data-text="I am open to work, including **_AP track, PostDoc, and industry research positions_**. Please feel free to reach out!" 
+  <div class="type-line" data-text="I am open to work, including <em>AP track, PostDoc, and industry research positions</em>. Please feel free to reach out!" 
        style="--n:124; --dur:calc(var(--n)*0.035s); --delay:4.755s;"></div>
-
+       
+  <!-- line 3.5 -->
+  <div class="type-line" data-text="Please feel free to reach out!" 
+       style="--n:124; --dur:calc(var(--n)*0.035s); --delay:4.755s;"></div>
+       
   <!-- line 4 -->
   <div class="type-line" data-text="📍 My research interests:" 
        style="--n:28; --dur:calc(var(--n)*0.035s); --delay:9.095s;"></div>
@@ -46,6 +54,11 @@ redirect_from:
   <!-- line 8 -->
   <div class="type-line" data-text="📌 I'm currently developing **auto-building energy modeling (ABEM) using large language models (LLMs)** to improve **modeling accessibility & scalability**." 
        style="--n:145; --dur:calc(var(--n)*0.035s); --delay:14.790s;"></div>
+       
+  <!-- line 8.5 -->
+  <div class="type-line" data-text="models (LLMs)** to improve **modeling accessibility & scalability**." 
+       style="--n:145; --dur:calc(var(--n)*0.035s); --delay:14.790s;"></div>
+       
 </div>
 
   <div class="llm-terminal__prompt">
