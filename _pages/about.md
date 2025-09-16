@@ -16,23 +16,14 @@ redirect_from:
     <span class="title">gang@about.md — llm run</span>
   </div>
 
-  <div id="llm-output" class="llm-terminal__screen" aria-live="polite"></div>
-
-  <div class="llm-terminal__prompt">
-    <span class="prompt">$</span>
-    <span>chatgpt.generate("about_gang")</span>
-    <span class="cursor" aria-hidden="true"></span>
-  </div>
-
-  <!-- 只改这里的 data-text 文案即可；其余代码不要动 -->
-  <div id="llm-source" hidden
-       data-text="> system
+  <!-- 默认显示完整介绍，脚本会自动“重放” -->
+  <pre id="llm-output" class="llm-terminal__screen" aria-live="polite">&gt; system
 You are an expert model tasked with summarizing Gang Jiang (姜钢).
 
-> user
+&gt; user
 Introduce yourself for a GitHub about page. Style: confident, research-oriented, minimal fluff, LLM token stream.
 
-> assistant
+&gt; assistant
 token_1  identity: PhD candidate @ University of Utah — graduating June 2026. Open to [AP track] [PostDoc] [Industry Research].
 
 token_2  focus: AI & LLM for Buildings; Physics-informed modeling; (Urban) Building Energy Modeling & Calibration.
@@ -49,57 +40,53 @@ token_7  links: homepage https://gangjiang1.github.io/ · scholar https://schola
 
 token_8  contact: reach out for research collab, postdoc, or applied research roles.
 
-✔ ready."></div>
+✔ ready.</pre>
+
+  <div class="llm-terminal__prompt">
+    <span class="prompt">$</span>
+    <span>chatgpt.generate("about_gang")</span>
+    <span class="cursor" aria-hidden="true"></span>
+  </div>
 </div>
 
-<noscript>
-<p><strong>About me (static):</strong> I’m a third-year PhD candidate at the University of Utah (graduating June 2026). Open to AP track, PostDoc, and industry research roles. Research: AI & LLM for Buildings, Physics-informed modeling, and (Urban) Building Energy Modeling & Calibration. I’m building ABEM—auto-building energy modeling with LLMs—to make modeling more accessible and scalable.</p>
-</noscript>
-
 <style>
-.llm-terminal{--bg:#0d1117;--fg:#d1d5da;--muted:#8b949e;--accent:#58a6ff;border:1px solid #30363d;border-radius:12px;background:var(--bg);color:var(--fg);font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;box-shadow:0 12px 30px rgba(0,0,0,.25);overflow:hidden}
-.llm-terminal__bar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #30363d;background:#161b22}
+.llm-terminal{--bg:#0d1117;--fg:#d1d5da;--muted:#8b949e;--accent:#58a6ff;
+  border:1px solid #30363d;border-radius:12px;background:var(--bg);color:var(--fg);
+  font:14px/1.6 ui-monospace,monospace;box-shadow:0 12px 30px rgba(0,0,0,.25);overflow:hidden}
+.llm-terminal__bar{display:flex;align-items:center;gap:8px;padding:10px 12px;
+  border-bottom:1px solid #30363d;background:#161b22}
 .llm-terminal .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
 .llm-terminal .dot.red{background:#ff5f56}.llm-terminal .dot.yellow{background:#ffbd2e}.llm-terminal .dot.green{background:#27c93f}
 .llm-terminal .title{color:var(--muted);margin-left:6px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.llm-terminal__screen{padding:14px 16px;min-height:260px;white-space:pre-wrap;word-break:break-word}
+.llm-terminal__screen{padding:14px 16px;min-height:260px;white-space:pre-wrap;word-break:break-word;margin:0}
 .llm-terminal__prompt{border-top:1px dashed #30363d;padding:10px 16px;color:var(--muted)}
 .llm-terminal .prompt{color:var(--accent);margin-right:6px}
-.cursor{display:inline-block;width:10px;height:1.1em;background:var(--fg);vertical-align:-2px;margin-left:6px;animation:blink 1s steps(1) infinite}
+.cursor{display:inline-block;width:10px;height:1.1em;background:var(--fg);
+  vertical-align:-2px;margin-left:6px;animation:blink 1s steps(1) infinite}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 :root{color-scheme:dark}
 </style>
 
-<script type="text/javascript">
+<script>
 (function(){
-  // 打字速度（毫秒/字符）——想更快就调小
-  var SPEED_MS = 18;
-
-  function start(){
-    var out = document.getElementById('llm-output');
-    var src = document.getElementById('llm-source');
-    if(!out || !src) return;
-    var text = src.getAttribute('data-text') || '';
-    // 保险：清空再打
-    out.textContent = '';
+  var SPEED_MS = 20; // 打字速度，数值越小越快
+  function startTyping(){
+    var pre = document.getElementById('llm-output');
+    if(!pre) return;
+    var full = pre.textContent;
+    pre.textContent = '';
     var i = 0;
     (function type(){
-      if(i >= text.length) return;
-      out.textContent += text.charAt(i++);
+      if(i >= full.length) return;
+      pre.textContent += full.charAt(i++);
       setTimeout(type, SPEED_MS);
     })();
   }
-
-  // 兼容 GitHub Pages/主题的懒加载或 PJAX：两种事件都监听
-  if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    setTimeout(start, 0);
+  if(document.readyState === 'complete' || document.readyState === 'interactive'){
+    setTimeout(startTyping,0);
   } else {
-    document.addEventListener('DOMContentLoaded', start, {once:true});
+    document.addEventListener('DOMContentLoaded', startTyping, {once:true});
   }
-  // 一些主题用局部导航（如 instant.page / turbolinks），兜底监听 pageshow
-  window.addEventListener('pageshow', function(e){
-    if (e.persisted) { start(); }
-  }, false);
 })();
 </script>
 
