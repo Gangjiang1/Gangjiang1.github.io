@@ -15,12 +15,41 @@ redirect_from:
     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
     <span class="title">gang@about.md — llm run</span>
   </div>
+
   <div id="llm-output" class="llm-terminal__screen" aria-live="polite"></div>
+
   <div class="llm-terminal__prompt">
     <span class="prompt">$</span>
     <span>chatgpt.generate("about_gang")</span>
     <span class="cursor" aria-hidden="true"></span>
   </div>
+
+  <!-- 只改这里的 data-text 文案即可；其余代码不要动 -->
+  <div id="llm-source" hidden
+       data-text="> system
+You are an expert model tasked with summarizing Gang Jiang (姜钢).
+
+> user
+Introduce yourself for a GitHub about page. Style: confident, research-oriented, minimal fluff, LLM token stream.
+
+> assistant
+token_1  identity: PhD candidate @ University of Utah — graduating June 2026. Open to [AP track] [PostDoc] [Industry Research].
+
+token_2  focus: AI & LLM for Buildings; Physics-informed modeling; (Urban) Building Energy Modeling & Calibration.
+
+token_3  now_building: ABEM — auto-building energy modeling with LLMs to boost accessibility & scalability.
+
+token_4  tooling: multi-agent flows, RAG, 8760-h calibration, HPC pipelines.
+
+token_5  impact: lower modeling barriers; faster iteration; better-calibrated decisions.
+
+token_6  interests: building + urban energy, renewables integration, policy-aware analytics.
+
+token_7  links: homepage https://gangjiang1.github.io/ · scholar https://scholar.google.com/citations?user=RGjcgyEAAAAJ · project https://huggingface.co/EPlus-LLM
+
+token_8  contact: reach out for research collab, postdoc, or applied research roles.
+
+✔ ready."></div>
 </div>
 
 <noscript>
@@ -28,7 +57,7 @@ redirect_from:
 </noscript>
 
 <style>
-.llm-terminal{--bg:#0d1117;--fg:#d1d5da;--muted:#8b949e;--accent:#58a6ff;--ok:#3fb950;--warn:#d29922;--err:#f85149; border:1px solid #30363d;border-radius:12px;background:var(--bg);color:var(--fg);font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;box-shadow:0 12px 30px rgba(0,0,0,.25);overflow:hidden}
+.llm-terminal{--bg:#0d1117;--fg:#d1d5da;--muted:#8b949e;--accent:#58a6ff;border:1px solid #30363d;border-radius:12px;background:var(--bg);color:var(--fg);font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;box-shadow:0 12px 30px rgba(0,0,0,.25);overflow:hidden}
 .llm-terminal__bar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #30363d;background:#161b22}
 .llm-terminal .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
 .llm-terminal .dot.red{background:#ff5f56}.llm-terminal .dot.yellow{background:#ffbd2e}.llm-terminal .dot.green{background:#27c93f}
@@ -38,133 +67,39 @@ redirect_from:
 .llm-terminal .prompt{color:var(--accent);margin-right:6px}
 .cursor{display:inline-block;width:10px;height:1.1em;background:var(--fg);vertical-align:-2px;margin-left:6px;animation:blink 1s steps(1) infinite}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
-.token-key{color:#a5d6ff}
-.token-emph{color:#ffdf85}
-.token-badge{background:#1f6feb;color:#fff;border-radius:10px;padding:0 6px;margin:0 2px;font-size:12px}
-.link{color:var(--accent);text-decoration:none;border-bottom:1px dashed #30363d}
-.link:hover{border-bottom-color:var(--accent)}
 :root{color-scheme:dark}
 </style>
 
-<script>
+<script type="text/javascript">
 (function(){
-  const out = document.getElementById('llm-output');
+  // 打字速度（毫秒/字符）——想更快就调小
+  var SPEED_MS = 18;
 
-  // 你可以在这里改打字速度（毫秒/字符）
-  const SPEED_MS = 18;
-
-  // 要显示的文本（会逐字打印）
-  const content = [
-    {h:"> system", c:"token-key"},
-    "\nYou are an expert model tasked with summarizing ",
-    {h:"Gang Jiang", c:"token-emph"},
-    " (姜钢).\n\n",
-    {h:"> user", c:"token-key"},
-    "\nIntroduce yourself for a GitHub about page. Style: confident, research-oriented, minimal fluff, LLM token stream.\n\n",
-    {h:"> assistant", c:"token-key"},
-    "\n",
-    // 下面是你的个人介绍正文（可随时编辑文案）
-    "token_1  ",
-    {h:"identity:", c:"token-key"},
-    " PhD candidate @ University of Utah — graduating ",
-    {h:"June 2026", c:"token-emph"},
-    ". Open to ",
-    {h:"AP track", c:"token-badge"},
-    " ",
-    {h:"PostDoc", c:"token-badge"},
-    " ",
-    {h:"Industry Research", c:"token-badge"},
-    ".\n\n",
-
-    "token_2  ",
-    {h:"focus:", c:"token-key"},
-    " AI & LLM for Buildings; Physics-informed modeling; (Urban) Building Energy Modeling & Calibration.\n",
-
-    "token_3  ",
-    {h:"now_building:", c:"token-key"},
-    " ABEM — auto-building energy modeling with LLMs to boost accessibility & scalability.\n",
-
-    "token_4  ",
-    {h:"tooling:", c:"token-key"},
-    " multi-agent flows, retrieval (RAG), 8760-h calibration, HPC pipelines.\n",
-
-    "token_5  ",
-    {h:"impact:", c:"token-key"},
-    " lower modeling barriers; faster iteration; better-calibrated decisions.\n\n",
-
-    "token_6  ",
-    {h:"interests:", c:"token-key"},
-    " building + urban energy, renewables integration, policy-aware analytics.\n",
-
-    "token_7  ",
-    {h:"links:", c:"token-key"},
-    " homepage ",
-    {a:"https://gangjiang1.github.io/", t:"gangjiang1.github.io"},
-    " · scholar ",
-    {a:"https://scholar.google.com/citations?user=RGjcgyEAAAAJ&hl=en", t:"Google Scholar"},
-    " · project ",
-    {a:"https://huggingface.co/EPlus-LLM", t:"EPlus-LLM"},
-    ".\n\n",
-
-    "token_8  ",
-    {h:"contact:", c:"token-key"},
-    " reach out for research collab, postdoc, or applied research roles.\n",
-    "\n",
-    {h:"✔ ready.", c:"token-emph"}
-  ];
-
-  // 把上面的结构转换为纯字符串+标注段，并逐字符打字
-  let queue = [];
-  for (const chunk of content) {
-    if (typeof chunk === "string") {
-      queue.push({type:"text", text:chunk});
-    } else if (chunk.h) {
-      queue.push({type:"span", cls:chunk.c || "", text:chunk.h});
-    } else if (chunk.a) {
-      queue.push({type:"link", href:chunk.a, text:chunk.t});
-    } else {
-      queue.push({type:"text", text:String(chunk)});
-    }
+  function start(){
+    var out = document.getElementById('llm-output');
+    var src = document.getElementById('llm-source');
+    if(!out || !src) return;
+    var text = src.getAttribute('data-text') || '';
+    // 保险：清空再打
+    out.textContent = '';
+    var i = 0;
+    (function type(){
+      if(i >= text.length) return;
+      out.textContent += text.charAt(i++);
+      setTimeout(type, SPEED_MS);
+    })();
   }
 
-  function typeText(node, text, idx=0, done){
-    if (idx >= text.length) { done && done(); return; }
-    node.textContent += text[idx];
-    setTimeout(()=>typeText(node, text, idx+1, done), SPEED_MS);
+  // 兼容 GitHub Pages/主题的懒加载或 PJAX：两种事件都监听
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(start, 0);
+  } else {
+    document.addEventListener('DOMContentLoaded', start, {once:true});
   }
-
-  function appendSpan(text, cls, cb){
-    const span = document.createElement('span');
-    if (cls) span.className = cls;
-    out.appendChild(span);
-    typeText(span, text, 0, cb);
-  }
-
-  function appendLink(text, href, cb){
-    const a = document.createElement('a');
-    a.href = href; a.target = "_blank"; a.rel = "noopener"; a.className = "link";
-    out.appendChild(a);
-    typeText(a, text, 0, cb);
-  }
-
-  function appendPlain(text, cb){
-    // 普通文本直接往输出容器里逐字打印
-    const span = document.createElement('span');
-    out.appendChild(span);
-    typeText(span, text, 0, cb);
-  }
-
-  function run(i=0){
-    if (i >= queue.length) return;
-    const q = queue[i];
-    const next = ()=> run(i+1);
-    if (q.type === "span")      appendSpan(q.text, q.cls, next);
-    else if (q.type === "link") appendLink(q.text, q.href, next);
-    else                        appendPlain(q.text, next);
-  }
-
-  // 自动开始打字
-  run();
+  // 一些主题用局部导航（如 instant.page / turbolinks），兜底监听 pageshow
+  window.addEventListener('pageshow', function(e){
+    if (e.persisted) { start(); }
+  }, false);
 })();
 </script>
 
