@@ -1,80 +1,171 @@
 ---
-permalink: /about/
+permalink: /
 title: "👋🏼 Hi there, I'm Gang!"
 excerpt: "About me"
 author_profile: true
-layout: single
+redirect_from:
+  - /about/
+  - /about.html
 ---
 
-<!-- Optional image on the right -->
-![LLM for Building Modeling](/images/graphic.png){: .align-right width="420px"}
+![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="420px"}
+
+<div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
+  <div class="llm-terminal__bar">
+    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+    <span class="title">gang@about.md — llm run</span>
+    <div class="controls">
+      <button id="llm-toggle" aria-pressed="false" title="Pause/Resume">⏯</button>
+      <button id="llm-replay" title="Replay">↺</button>
+      <label class="speed">⚡
+        <input id="llm-speed" type="range" min="0" max="100" value="50" aria-label="Streaming speed">
+      </label>
+    </div>
+  </div>
+  <div id="llm-output" class="llm-terminal__screen" aria-live="polite"></div>
+  <div class="llm-terminal__prompt">
+    <span class="prompt">$</span>
+    <span>chatgpt.generate(</span><span class="param">"about_gang"</span><span>)</span>
+    <span class="cursor" aria-hidden="true"></span>
+  </div>
+</div>
+
+<noscript>
+<p><strong>About me (static):</strong> I’m a third-year PhD candidate at the University of Utah (graduating June 2026). Open to AP track, PostDoc, and industry research roles. Research: AI & LLM for Buildings, Physics-informed modeling, and (Urban) Building Energy Modeling & Calibration. I’m building ABEM—auto-building energy modeling with LLMs—to make modeling more accessible and scalable.</p>
+</noscript>
 
 <style>
-#llm-typewriter {
-  font-family: monospace;
-  background-color: #0d1117;
-  color: #d1d5da;
-  padding: 16px;
-  border-radius: 10px;
-  font-size: 14px;
-  white-space: pre-wrap;
-  line-height: 1.6;
-  min-height: 240px;
-  position: relative;
-  box-shadow: 0 0 10px #00000088;
-  margin-top: 1.5rem;
-}
-
-.cursor {
-  display: inline-block;
-  width: 8px;
-  height: 1em;
-  background-color: #d1d5da;
-  animation: blink 1s steps(1) infinite;
-  vertical-align: bottom;
-  margin-left: 2px;
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  50.01%, 100% { opacity: 0; }
-}
+.llm-terminal{--bg:#0d1117;--fg:#d1d5da;--muted:#8b949e;--accent:#58a6ff;--ok:#3fb950;--warn:#d29922;--err:#f85149; border:1px solid #30363d;border-radius:12px;background:var(--bg);color:var(--fg);font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;box-shadow:0 12px 30px rgba(0,0,0,.25);overflow:hidden}
+.llm-terminal__bar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #30363d;background:#161b22;position:relative}
+.llm-terminal .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.llm-terminal .dot.red{background:#ff5f56}.llm-terminal .dot.yellow{background:#ffbd2e}.llm-terminal .dot.green{background:#27c93f}
+.llm-terminal .title{color:var(--muted);margin-left:6px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.llm-terminal .controls{display:flex;gap:6px;align-items:center}
+.llm-terminal button{background:#21262d;border:1px solid #30363d;border-radius:8px;color:var(--fg);padding:4px 8px;cursor:pointer}
+.llm-terminal button:hover{background:#2b3139}
+.llm-terminal .speed{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:12px}
+.llm-terminal input[type="range"]{accent-color:var(--accent)}
+.llm-terminal__screen{padding:14px 16px;min-height:260px;white-space:pre-wrap;word-break:break-word}
+.llm-terminal__prompt{border-top:1px dashed #30363d;padding:10px 16px;color:var(--muted)}
+.llm-terminal .prompt{color:var(--accent);margin-right:6px}
+.cursor{display:inline-block;width:10px;height:1.1em;background:var(--fg);vertical-align:-2px;margin-left:6px;animation:blink 1s steps(1) infinite}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.token-key{color:#a5d6ff}
+.token-str{color:#7ee787}
+.token-emph{color:#ffdf85}
+.token-badge{background:#1f6feb;color:#fff;border-radius:10px;padding:0 6px;margin:0 2px;font-size:12px}
+.badge{display:inline-block;border:1px solid #30363d;border-radius:20px;padding:2px 8px;margin:0 4px 0 0;color:var(--muted)}
+.link{color:var(--accent);text-decoration:none;border-bottom:1px dashed #30363d}
+.link:hover{border-bottom-color:var(--accent)}
+:root{color-scheme:dark}
 </style>
 
-<div id="llm-typewriter"></div>
-
-{% raw %}
 <script>
-const text = `
-> token_1: 👋🏼 hello_world
-> token_2: identify("Gang Jiang")
-> token_3: role("PhD Candidate", university="University of Utah", year="2026")
-> token_4: seeking(["AP track", "PostDoc", "Research (Industry)"])
-> token_5: current_research := LLMs ⨉ Building Modeling
-> token_6: goals := [accessibility, scalability, automation]
-> token_7: interests += [🤖 AI_for_Buildings, ⚙️ Physics_Informed_Models, 🏙 Urban_BEM_and_Calibration]
-> token_8: message("Feel free to connect!")
-`;
+(function(){
+  const out = document.getElementById('llm-output');
+  const toggleBtn = document.getElementById('llm-toggle');
+  const replayBtn = document.getElementById('llm-replay');
+  const speed = document.getElementById('llm-speed');
 
-const container = document.getElementById("llm-typewriter");
-const cursor = document.createElement("span");
-cursor.classList.add("cursor");
-container.appendChild(cursor);
+  // Streaming content (token-like chunks)
+  const stream = [
+    {t:"> system", cls:"token-key"},
+    "\nYou are an expert model tasked with summarizing ",
+    {t:"Gang Jiang", cls:"token-emph"},
+    " (姜钢).\n\n",
+    {t:"> user", cls:"token-key"},
+    "\nIntroduce yourself succinctly for a GitHub about page. Style: confident, research-oriented, minimal fluff, token-stream.\n\n",
+    {t:"> assistant", cls:"token-key"},
+    "\n",
+    {t:"token_1", cls:"badge"}, "  ", {t:"identity:", cls:"token-key"},
+    " PhD candidate @ University of Utah — graduating ",
+    {t:"June 2026", cls:"token-emph"}, ". Open to ",
+    {t:"AP track", cls:"token-badge"}, " ",
+    {t:"PostDoc", cls:"token-badge"}, " ",
+    {t:"Industry Research", cls:"token-badge"}, ".\n\n",
 
-let i = 0;
+    {t:"token_2", cls:"badge"}, "  ", {t:"focus:", cls:"token-key"},
+    " AI & LLM for Buildings; Physics-informed modeling; ",
+    "(Urban) Building Energy Modeling & Calibration.\n",
 
-function type() {
-  if (i < text.length) {
-    const char = text[i];
-    cursor.insertAdjacentText("beforebegin", char);
-    i++;
-    setTimeout(type, char === "\n" ? 200 : 20); // slower on newline
+    {t:"token_3", cls:"badge"}, "  ", {t:"now_building:", cls:"token-key"},
+    " ABEM — auto-building energy modeling with LLMs to boost ",
+    "accessibility and scalability.\n",
+
+    {t:"token_4", cls:"badge"}, "  ", {t:"tooling:", cls:"token-key"},
+    " multi-agent flows, retrieval, calibration at 8760-h resolution, HPC pipelines.\n",
+
+    {t:"token_5", cls:"badge"}, "  ", {t:"impact:", cls:"token-key"},
+    " lower modeling barriers; faster iteration; better calibrated decisions.\n\n",
+
+    {t:"token_6", cls:"badge"}, "  ", {t:"interests:", cls:"token-key"},
+    " building+urban energy, renewables integration, policy-aware analytics.\n",
+
+    {t:"token_7", cls:"badge"}, "  ", {t:"links:", cls:"token-key"},
+    " homepage ",
+    {t:"gangjiang1.github.io", cls:"link", href:"https://gangjiang1.github.io/"},
+    " · scholar ",
+    {t:"Google Scholar", cls:"link", href:"https://scholar.google.com/citations?user=RGjcgyEAAAAJ&hl=en"},
+    " · project ",
+    {t:"EPlus-LLM", cls:"link", href:"https://huggingface.co/EPlus-LLM"},
+    ".\n\n",
+
+    {t:"token_8", cls:"badge"}, "  ", {t:"contact:", cls:"token-key"},
+    " reach out for research collab, postdoc, or applied research roles.\n",
+
+    "\n", {t:"✔ ready.", cls:"token-emph"}
+  ];
+
+  let i = 0, paused = false, handle = null;
+
+  function speedMs(){
+    // Map 0..100 -> 60..5 ms per token step
+    const v = Number(speed.value||50);
+    return 60 - Math.round(v*0.55);
   }
-}
 
-window.onload = () => setTimeout(type, 400);
+  function renderChunk(chunk){
+    if(typeof chunk === 'string'){ out.append(chunk); return; }
+    const span = document.createElement(chunk.href ? 'a' : 'span');
+    span.textContent = chunk.t;
+    if(chunk.cls) span.className = chunk.cls;
+    if(chunk.href){ span.href = chunk.href; span.target = "_blank"; rel="noopener"; }
+    out.appendChild(span);
+  }
+
+  function tick(){
+    if(paused) return;
+    if(i >= stream.length){ clearInterval(handle); return; }
+    renderChunk(stream[i++]);
+  }
+
+  function play(){
+    paused = false;
+    clearInterval(handle);
+    handle = setInterval(tick, speedMs());
+    toggleBtn.setAttribute('aria-pressed','true');
+  }
+  function pause(){
+    paused = true;
+    clearInterval(handle);
+    toggleBtn.setAttribute('aria-pressed','false');
+  }
+
+  toggleBtn?.addEventListener('click', ()=> paused ? play() : pause());
+  replayBtn?.addEventListener('click', ()=>{
+    pause();
+    out.textContent = '';
+    i = 0;
+    play();
+  });
+  speed?.addEventListener('input', ()=>{
+    if(!paused){ play(); }
+  });
+
+  // Autoplay on first paint
+  play();
+})();
 </script>
-{% endraw %}
 
 ## 🖇 Open-Source Contributions
 [EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.
