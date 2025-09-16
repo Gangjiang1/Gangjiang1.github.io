@@ -3,89 +3,91 @@ permalink: /
 title: "👋🏼 Hi there, I'm Gang!"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-<style>
-.terminal {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  font-family: 'Courier New', monospace;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  white-space: pre-wrap;
-  overflow: hidden;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  position: relative;
-}
+![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="420px"}
 
-.terminal::before {
-  content: "gang@llm-terminal ~ $";
-  color: #4ade80;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 0.5rem;
-}
+<div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
+  <div class="llm-terminal__bar">
+    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+    <span class="title">gang@about.md — llm run</span>
+  </div>
 
-.cursor {
-  display: inline-block;
-  width: 8px;
-  height: 1.2em;
-  background-color: #f0f0f0;
-  animation: blink 1s step-end infinite;
-  vertical-align: text-bottom;
-  margin-left: 2px;
-}
+  <div class="llm-terminal__screen">
+    <!-- 一行一行逐字打印（已精确计算长度 --n），只改 data-text；若改了内容同步改 --n -->
+    <div class="type-line" data-text="> system"                                   style="--n:8;  --dur:calc(var(--n)*0.035s); --delay:0s;"></div>
+    <div class="type-line" data-text="You are an expert model summarizing Gang Jiang (姜钢)." style="--n:53; --dur:calc(var(--n)*0.035s); --delay:0.40s;"></div>
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
+    <div class="type-line" data-text="> user"                                     style="--n:6;  --dur:calc(var(--n)*0.035s); --delay:2.375s;"></div>
+    <div class="type-line" data-text="Introduce yourself in an LLM token-stream style."        style="--n:48; --dur:calc(var(--n)*0.035s); --delay:2.705s;"></div>
 
-.token-tag {
-  color: #a0a0a0;
-  font-size: 0.85em;
-  opacity: 0.7;
-}
-</style>
+    <div class="type-line" data-text="> assistant"                                style="--n:11; --dur:calc(var(--n)*0.035s); --delay:4.505s;"></div>
+    <div class="type-line" data-text="token_1  identity: PhD candidate @ University of Utah — June 2026." style="--n:66; --dur:calc(var(--n)*0.035s); --delay:5.01s;"></div>
+    <div class="type-line" data-text="token_2  focus: AI & LLM for Buildings; Physics-informed; Urban BEM & Calibration." style="--n:82; --dur:calc(var(--n)*0.035s); --delay:7.44s;"></div>
+    <div class="type-line" data-text="token_3  now_building: ABEM — auto-building energy modeling with LLMs." style="--n:70; --dur:calc(var(--n)*0.035s); --delay:10.43s;"></div>
+    <div class="type-line" data-text="token_4  tooling: multi-agent flows; RAG; 8760-h calibration; HPC pipelines." style="--n:76; --dur:calc(var(--n)*0.035s); --delay:13.00s;"></div>
+    <div class="type-line" data-text="token_5  impact: lower barriers; faster iteration; better-calibrated decisions." style="--n:79; --dur:calc(var(--n)*0.035s); --delay:15.78s;"></div>
+    <div class="type-line" data-text="token_6  links: homepage gangjiang1.github.io · scholar Google Scholar · project EPlus-LLM" style="--n:90; --dur:calc(var(--n)*0.035s); --delay:18.665s;"></div>
+    <div class="type-line" data-text="token_7  contact: open to AP track, PostDoc, and industry research roles." style="--n:73; --dur:calc(var(--n)*0.035s); --delay:21.935s;"></div>
+  </div>
 
-<div class="terminal" id="terminal-output">
-<span class="token-tag">[system] initializing LLM persona...</span>
-<br><br>
+  <div class="llm-terminal__prompt">
+    <span class="prompt">$</span>
+    <span>chatgpt.generate("about_gang")</span>
+    <span class="cursor" aria-hidden="true"></span>
+  </div>
 </div>
 
-<script>
-const fullText = `Hi, I'm Gang. Third-year PhD candidate at The University of Utah, researching at the intersection of AI & physics-informed building modeling. Open to collaboration.`;
+<style>
+.llm-terminal{
+  --bg:#0d1117; --fg:#d1d5da; --muted:#8b949e; --accent:#58a6ff;
+  border:1px solid #30363d; border-radius:12px; background:var(--bg); color:var(--fg);
+  font:14px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  box-shadow:0 12px 30px rgba(0,0,0,.25); overflow:hidden
+}
+.llm-terminal__bar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #30363d;background:#161b22}
+.llm-terminal .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.llm-terminal .dot.red{background:#ff5f56}.llm-terminal .dot.yellow{background:#ffbd2e}.llm-terminal .dot.green{background:#27c93f}
+.llm-terminal .title{color:var(--muted);margin-left:6px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.llm-terminal__screen{padding:14px 16px;min-height:260px;white-space:pre-wrap;word-break:break-word;margin:0}
+.llm-terminal__prompt{border-top:1px dashed #30363d;padding:10px 16px;color:var(--muted)}
+.llm-terminal .prompt{color:var(--accent);margin-right:6px}
 
-const terminal = document.getElementById('terminal-output');
-const typingDelay = 50; // 每个字符间隔（毫秒），可调快慢
-let i = 0;
-
-function typeWriter() {
-  if (i < fullText.length) {
-    const char = fullText.charAt(i);
-    // 处理换行
-    if (char === '\\n') {
-      terminal.innerHTML += '<br>';
-    } else {
-      terminal.innerHTML += char;
-    }
-    i++;
-    setTimeout(typeWriter, typingDelay);
-  } else {
-    // 打字完成后添加光标
-    terminal.innerHTML += ' <span class="cursor"></span>';
-  }
+/* 核心：纯 CSS 逐字打字（多行） */
+.type-line{
+  position: relative;
+  display:block;
+  font-variant-ligatures:none;
+  white-space: pre;          /* 精准按字符宽度计算 */
+  overflow: hidden;
+  width: 0ch;               /* 从 0 个字符开始 */
+  border-right: 2px solid var(--fg);  /* 光标 */
+  /* 两个动画：typing 为逐字，caret 为光标闪烁 */
+  animation: typing var(--dur) steps(var(--n)) forwards,
+             caret 1s steps(1) infinite;
+  animation-delay: var(--delay), var(--delay);
+}
+.type-line::before{
+  content: attr(data-text);
 }
 
-// 延迟 500ms 后开始打字，模拟“模型思考中”
-setTimeout(typeWriter, 500);
-</script>
+/* 光标闪烁 */
+@keyframes caret {
+  0%,49%  { border-right-color: var(--fg); }
+  50%,100%{ border-right-color: transparent; }
+}
+/* 逐字动画：增长到 n 个字符宽 */
+@keyframes typing {
+  from { width: 0ch; }
+  to   { width: calc(var(--n) * 1ch); }
+}
+
+/* 全局暗色方案 */
+:root{ color-scheme: dark; }
+</style>
 
 ## 🖇 Open-Source Contributions
 [EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.
