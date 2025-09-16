@@ -16,20 +16,14 @@ redirect_from:
 
   <div class="llm-terminal__screen">
     <!-- 一行一行逐字打印（已精确计算长度 --n），只改 data-text；若改了内容同步改 --n -->
-    <div class="type-line" data-text="> system"                                   style="--n:8;  --dur:calc(var(--n)*0.035s); --delay:0s;"></div>
-    <div class="type-line" data-text="You are an expert model summarizing Gang Jiang (姜钢)." style="--n:53; --dur:calc(var(--n)*0.035s); --delay:0.40s;"></div>
-
-    <div class="type-line" data-text="> user"                                     style="--n:6;  --dur:calc(var(--n)*0.035s); --delay:2.375s;"></div>
-    <div class="type-line" data-text="Introduce yourself in an LLM token-stream style."        style="--n:48; --dur:calc(var(--n)*0.035s); --delay:2.705s;"></div>
-
-    <div class="type-line" data-text="> assistant"                                style="--n:11; --dur:calc(var(--n)*0.035s); --delay:4.505s;"></div>
-    <div class="type-line" data-text="token_1  identity: PhD candidate @ University of Utah — June 2026." style="--n:66; --dur:calc(var(--n)*0.035s); --delay:5.01s;"></div>
-    <div class="type-line" data-text="token_2  focus: AI & LLM for Buildings; Physics-informed; Urban BEM & Calibration." style="--n:82; --dur:calc(var(--n)*0.035s); --delay:7.44s;"></div>
-    <div class="type-line" data-text="token_3  now_building: ABEM — auto-building energy modeling with LLMs." style="--n:70; --dur:calc(var(--n)*0.035s); --delay:10.43s;"></div>
-    <div class="type-line" data-text="token_4  tooling: multi-agent flows; RAG; 8760-h calibration; HPC pipelines." style="--n:76; --dur:calc(var(--n)*0.035s); --delay:13.00s;"></div>
-    <div class="type-line" data-text="token_5  impact: lower barriers; faster iteration; better-calibrated decisions." style="--n:79; --dur:calc(var(--n)*0.035s); --delay:15.78s;"></div>
-    <div class="type-line" data-text="token_6  links: homepage gangjiang1.github.io · scholar Google Scholar · project EPlus-LLM" style="--n:90; --dur:calc(var(--n)*0.035s); --delay:18.665s;"></div>
-    <div class="type-line" data-text="token_7  contact: open to AP track, PostDoc, and industry research roles." style="--n:73; --dur:calc(var(--n)*0.035s); --delay:21.935s;"></div>
+    <div class="type-line" data-text="> Gang's Intro:"                                   style="--n:8;  --dur:calc(var(--n)*0.035s); --delay:0s;"></div>
+    <div class="type-line" data-text="👨🏻‍💻 I'm a third-year PhD candidate at The University of Utah, expecting to graduate in June 2026." style="--n:66; --dur:calc(var(--n)*0.035s); --delay:5.01s;"></div>
+    <div class="type-line" data-text="I am open to work, including **_AP track, PostDoc, and industry research positions_**. Please feel free to reach out!" style="--n:82; --dur:calc(var(--n)*0.035s); --delay:7.44s;"></div>
+    <div class="type-line" data-text="📍 My research interests:" style="--n:70; --dur:calc(var(--n)*0.035s); --delay:10.43s;"></div>
+    <div class="type-line" data-text="- 🤖 **AI & LLM for Building**" style="--n:76; --dur:calc(var(--n)*0.035s); --delay:13.00s;"></div>
+    <div class="type-line" data-text="- ⚙️ **Physics-Informed Modeling**" style="--n:79; --dur:calc(var(--n)*0.035s); --delay:15.78s;"></div>
+    <div class="type-line" data-text="- 🏙 **(Urban) Building Energy Modeling & Calibration**." style="--n:90; --dur:calc(var(--n)*0.035s); --delay:18.665s;"></div>
+    <div class="type-line" data-text="📌 I'm currently developing **auto-building energy modeling (ABEM) using large language models (LLMs)** to improve **modeling accessibility & scalability**." style="--n:73; --dur:calc(var(--n)*0.035s); --delay:21.935s;"></div>
   </div>
 
   <div class="llm-terminal__prompt">
@@ -87,7 +81,9 @@ redirect_from:
 /* 全局暗色方案 */
 :root{ color-scheme: dark; }
 </style>
-
+  
+  
+  
 ![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="420px"}
 
 ## 🖇 Open-Source Contributions
