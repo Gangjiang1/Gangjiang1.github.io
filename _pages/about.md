@@ -81,15 +81,26 @@ redirect_from:
 /* 全局暗色方案 */
 :root{ color-scheme: dark; }
 </style>
-  
-  
-  
-![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="420px"}
 
 ## 🖇 Open-Source Contributions
-[EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.
 
+<div style="display: flex; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
+
+<!-- Left Column -->
+<div style="flex: 1 1 300px; min-width: 280px;">
+
+[EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.  
+<br>  
 [Prompting LLMs for ABEM](https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling): A comprehensive guideline for prompt engineering of LLMs in auto-building energy modeling.
+
+</div>
+
+<!-- Right Column -->
+<div style="flex: 0 0 420px; text-align: right;">
+  <img src="/images/graphic.png" alt="Illustration of LLM for Auto-building modeling" width="420px" style="max-width: 100%; height: auto; border-radius: 10px;">
+</div>
+
+</div>
 
 ## 🔬 Experience
 🧪 As part of my PhD journey, I am working with [Dr. Jianli Chen](https://scholar.google.com/citations?user=Y0ycryUAAAAJ&hl=en) on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimization, and AI Applications in Buildings.
