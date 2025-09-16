@@ -15,16 +15,38 @@ redirect_from:
   </div>
 
   <div class="llm-terminal__screen">
-    <!-- 一行一行逐字打印（已精确计算长度 --n），只改 data-text；若改了内容同步改 --n -->
-    <div class="type-line" data-text="> Gang's Intro:"                                   style="--n:8;  --dur:calc(var(--n)*0.035s); --delay:0s;"></div>
-    <div class="type-line" data-text="👨🏻‍💻 I'm a third-year PhD candidate at The University of Utah, expecting to graduate in June 2026." style="--n:66; --dur:calc(var(--n)*0.035s); --delay:5.01s;"></div>
-    <div class="type-line" data-text="I am open to work, including **_AP track, PostDoc, and industry research positions_**. Please feel free to reach out!" style="--n:82; --dur:calc(var(--n)*0.035s); --delay:7.44s;"></div>
-    <div class="type-line" data-text="📍 My research interests:" style="--n:70; --dur:calc(var(--n)*0.035s); --delay:10.43s;"></div>
-    <div class="type-line" data-text="- 🤖 **AI & LLM for Building**" style="--n:76; --dur:calc(var(--n)*0.035s); --delay:13.00s;"></div>
-    <div class="type-line" data-text="- ⚙️ **Physics-Informed Modeling**" style="--n:79; --dur:calc(var(--n)*0.035s); --delay:15.78s;"></div>
-    <div class="type-line" data-text="- 🏙 **(Urban) Building Energy Modeling & Calibration**." style="--n:90; --dur:calc(var(--n)*0.035s); --delay:18.665s;"></div>
-    <div class="type-line" data-text="📌 I'm currently developing **auto-building energy modeling (ABEM) using large language models (LLMs)** to improve **modeling accessibility & scalability**." style="--n:73; --dur:calc(var(--n)*0.035s); --delay:21.935s;"></div>
-  </div>
+  <!-- line 1 -->
+  <div class="type-line" data-text="> Gang's Intro:" 
+       style="--n:15; --dur:calc(var(--n)*0.035s); --delay:0s;"></div>
+
+  <!-- line 2 -->
+  <div class="type-line" data-text="👨🏻‍💻 I'm a third-year PhD candidate at The University of Utah, expecting to graduate in June 2026." 
+       style="--n:113; --dur:calc(var(--n)*0.035s); --delay:0.825s;"></div>
+
+  <!-- line 3 -->
+  <div class="type-line" data-text="I am open to work, including **_AP track, PostDoc, and industry research positions_**. Please feel free to reach out!" 
+       style="--n:124; --dur:calc(var(--n)*0.035s); --delay:4.755s;"></div>
+
+  <!-- line 4 -->
+  <div class="type-line" data-text="📍 My research interests:" 
+       style="--n:28; --dur:calc(var(--n)*0.035s); --delay:9.095s;"></div>
+
+  <!-- line 5 -->
+  <div class="type-line" data-text="- 🤖 **AI & LLM for Building**" 
+       style="--n:33; --dur:calc(var(--n)*0.035s); --delay:10.075s;"></div>
+
+  <!-- line 6 -->
+  <div class="type-line" data-text="- ⚙️ **Physics-Informed Modeling**" 
+       style="--n:40; --dur:calc(var(--n)*0.035s); --delay:11.230s;"></div>
+
+  <!-- line 7 -->
+  <div class="type-line" data-text="- 🏙 **(Urban) Building Energy Modeling & Calibration**." 
+       style="--n:62; --dur:calc(var(--n)*0.035s); --delay:12.630s;"></div>
+
+  <!-- line 8 -->
+  <div class="type-line" data-text="📌 I'm currently developing **auto-building energy modeling (ABEM) using large language models (LLMs)** to improve **modeling accessibility & scalability**." 
+       style="--n:145; --dur:calc(var(--n)*0.035s); --delay:14.790s;"></div>
+</div>
 
   <div class="llm-terminal__prompt">
     <span class="prompt">$</span>
