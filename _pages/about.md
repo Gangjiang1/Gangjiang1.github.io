@@ -1,11 +1,9 @@
 ---
-permalink: /
+permalink: /about/
 title: "👋🏼 Hi there, I'm Gang!"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+layout: single
 ---
 
 <style>
@@ -39,6 +37,7 @@ redirect_from:
 
 <div id="llm-typewriter"></div>
 
+{% raw %}
 <script>
 const text = `
 > token_1: 👋🏼 hello_world
@@ -67,8 +66,9 @@ function type() {
   }
 }
 
-window.onload = () => setTimeout(type, 500);  // delay start slightly
+window.onload = () => setTimeout(type, 500);
 </script>
+{% endraw %}
 
 ## 🖇 Open-Source Contributions
 [EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.
