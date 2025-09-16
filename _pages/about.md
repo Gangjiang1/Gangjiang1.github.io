@@ -8,8 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="420px"}
-
 <div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
   <div class="llm-terminal__bar">
     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
@@ -88,6 +86,8 @@ redirect_from:
 /* 全局暗色方案 */
 :root{ color-scheme: dark; }
 </style>
+
+![Illustration of LLM for Auto-building modeling](/images/graphic.png)
 
 ## 🖇 Open-Source Contributions
 [EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.
