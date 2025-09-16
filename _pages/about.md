@@ -6,6 +6,9 @@ author_profile: true
 layout: single
 ---
 
+<!-- Optional image on the right -->
+![LLM for Building Modeling](/images/graphic.png){: .align-right width="420px"}
+
 <style>
 #llm-typewriter {
   font-family: monospace;
@@ -18,11 +21,14 @@ layout: single
   line-height: 1.6;
   min-height: 240px;
   position: relative;
+  box-shadow: 0 0 10px #00000088;
+  margin-top: 1.5rem;
 }
 
 .cursor {
   display: inline-block;
   width: 8px;
+  height: 1em;
   background-color: #d1d5da;
   animation: blink 1s steps(1) infinite;
   vertical-align: bottom;
@@ -62,11 +68,11 @@ function type() {
     const char = text[i];
     cursor.insertAdjacentText("beforebegin", char);
     i++;
-    setTimeout(type, char === "\n" ? 200 : 20); // newline slower
+    setTimeout(type, char === "\n" ? 200 : 20); // slower on newline
   }
 }
 
-window.onload = () => setTimeout(type, 500);
+window.onload = () => setTimeout(type, 400);
 </script>
 {% endraw %}
 
