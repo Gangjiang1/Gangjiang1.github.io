@@ -75,7 +75,7 @@ redirect_from:
   position: relative;
   display:block;
   font-variant-ligatures:none;
-  white-space: pre-wrap; /* <-- 允许换行 */
+  white-space: pre;
   overflow: hidden;
   width: 0ch;
   border-right: 2px solid var(--fg);  /* 初始光标 */
@@ -111,9 +111,11 @@ redirect_from:
 <!-- Left Column -->
 <div style="flex: 1 1 300px; min-width: 280px;">
 
-[EPlus-LLMv1/v2](https://github.com/Gangjiang1/EPlus-LLM): LLM-driven automatic building energy modeling through natural language.  
-<br>  
-[Prompting LLMs for ABEM](https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling): A comprehensive guideline for prompt engineering of LLMs in auto-building energy modeling.
+<a href="https://github.com/Gangjiang1/EPlus-LLM" target="_blank"><strong>EPlus-LLMv1/v2</strong></a>:  
+LLM-driven automatic building energy modeling through natural language.  
+<br><br>  
+<a href="https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling" target="_blank"><strong>Prompting LLMs for ABEM</strong></a>:  
+A comprehensive guideline for prompt engineering of LLMs in auto-building energy modeling.
 
 </div>
 
