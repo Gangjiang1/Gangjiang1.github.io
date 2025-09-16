@@ -3,91 +3,88 @@ permalink: /
 title: "👋🏼 Hi there, I'm Gang!"
 excerpt: "About me"
 author_profile: true
-redirect_from:
+redirect_from: 
   - /about/
   - /about.html
 ---
 
-![Illustration of LLM for Auto-building modeling](/images/graphic.png){: .align-right width="420px"}
-
-<div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
-  <div class="llm-terminal__bar">
-    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-    <span class="title">gang@about.md — llm run</span>
-  </div>
-
-  <!-- 默认显示完整介绍，脚本会自动“重放” -->
-  <pre id="llm-output" class="llm-terminal__screen" aria-live="polite">&gt; system
-You are an expert model tasked with summarizing Gang Jiang (姜钢).
-
-&gt; user
-Introduce yourself for a GitHub about page. Style: confident, research-oriented, minimal fluff, LLM token stream.
-
-&gt; assistant
-token_1  identity: PhD candidate @ University of Utah — graduating June 2026. Open to [AP track] [PostDoc] [Industry Research].
-
-token_2  focus: AI & LLM for Buildings; Physics-informed modeling; (Urban) Building Energy Modeling & Calibration.
-
-token_3  now_building: ABEM — auto-building energy modeling with LLMs to boost accessibility & scalability.
-
-token_4  tooling: multi-agent flows, RAG, 8760-h calibration, HPC pipelines.
-
-token_5  impact: lower modeling barriers; faster iteration; better-calibrated decisions.
-
-token_6  interests: building + urban energy, renewables integration, policy-aware analytics.
-
-token_7  links: homepage https://gangjiang1.github.io/ · scholar https://scholar.google.com/citations?user=RGjcgyEAAAAJ · project https://huggingface.co/EPlus-LLM
-
-token_8  contact: reach out for research collab, postdoc, or applied research roles.
-
-✔ ready.</pre>
-
-  <div class="llm-terminal__prompt">
-    <span class="prompt">$</span>
-    <span>chatgpt.generate("about_gang")</span>
-    <span class="cursor" aria-hidden="true"></span>
-  </div>
-</div>
-
 <style>
-.llm-terminal{--bg:#0d1117;--fg:#d1d5da;--muted:#8b949e;--accent:#58a6ff;
-  border:1px solid #30363d;border-radius:12px;background:var(--bg);color:var(--fg);
-  font:14px/1.6 ui-monospace,monospace;box-shadow:0 12px 30px rgba(0,0,0,.25);overflow:hidden}
-.llm-terminal__bar{display:flex;align-items:center;gap:8px;padding:10px 12px;
-  border-bottom:1px solid #30363d;background:#161b22}
-.llm-terminal .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
-.llm-terminal .dot.red{background:#ff5f56}.llm-terminal .dot.yellow{background:#ffbd2e}.llm-terminal .dot.green{background:#27c93f}
-.llm-terminal .title{color:var(--muted);margin-left:6px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.llm-terminal__screen{padding:14px 16px;min-height:260px;white-space:pre-wrap;word-break:break-word;margin:0}
-.llm-terminal__prompt{border-top:1px dashed #30363d;padding:10px 16px;color:var(--muted)}
-.llm-terminal .prompt{color:var(--accent);margin-right:6px}
-.cursor{display:inline-block;width:10px;height:1.1em;background:var(--fg);
-  vertical-align:-2px;margin-left:6px;animation:blink 1s steps(1) infinite}
-@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
-:root{color-scheme:dark}
+.terminal {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  font-family: 'Courier New', monospace;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  white-space: pre-wrap;
+  overflow: hidden;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.terminal::before {
+  content: "gang@llm-terminal ~ $";
+  color: #4ade80;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.2em;
+  background-color: #f0f0f0;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.token-tag {
+  color: #a0a0a0;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
 </style>
 
+<div class="terminal" id="terminal-output">
+<span class="token-tag">[system] initializing LLM persona...</span>
+<br><br>
+</div>
+
 <script>
-(function(){
-  var SPEED_MS = 20; // 打字速度，数值越小越快
-  function startTyping(){
-    var pre = document.getElementById('llm-output');
-    if(!pre) return;
-    var full = pre.textContent;
-    pre.textContent = '';
-    var i = 0;
-    (function type(){
-      if(i >= full.length) return;
-      pre.textContent += full.charAt(i++);
-      setTimeout(type, SPEED_MS);
-    })();
-  }
-  if(document.readyState === 'complete' || document.readyState === 'interactive'){
-    setTimeout(startTyping,0);
+const fullText = `Hi, I'm Gang. Third-year PhD candidate at The University of Utah, researching at the intersection of AI & physics-informed building modeling. Open to collaboration.`;
+
+const terminal = document.getElementById('terminal-output');
+const typingDelay = 50; // 每个字符间隔（毫秒），可调快慢
+let i = 0;
+
+function typeWriter() {
+  if (i < fullText.length) {
+    const char = fullText.charAt(i);
+    // 处理换行
+    if (char === '\\n') {
+      terminal.innerHTML += '<br>';
+    } else {
+      terminal.innerHTML += char;
+    }
+    i++;
+    setTimeout(typeWriter, typingDelay);
   } else {
-    document.addEventListener('DOMContentLoaded', startTyping, {once:true});
+    // 打字完成后添加光标
+    terminal.innerHTML += ' <span class="cursor"></span>';
   }
-})();
+}
+
+// 延迟 500ms 后开始打字，模拟“模型思考中”
+setTimeout(typeWriter, 500);
 </script>
 
 ## 🖇 Open-Source Contributions
