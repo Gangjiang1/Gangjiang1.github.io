@@ -17,12 +17,12 @@ redirect_from:
   <div class="llm-terminal__screen">
 
   <!-- line 1 -->
-  <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:0s;">
+  <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:0.3s;">
     > Gang's Intro:
   </div>
 
   <!-- line 2 -->
-  <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:0.525s;">
+  <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:0.825s;">
     👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in
   </div>
 
@@ -32,7 +32,7 @@ redirect_from:
   </div>
 
   <!-- line 4 -->
-  <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:4.2s;">
+  <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:4.8s;">
     I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
   </div>
 
@@ -42,12 +42,12 @@ redirect_from:
   </div>
 
   <!-- line 6 -->
-  <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:8.00s;">
+  <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:8.50s;">
     📍 My research interests:
   </div>
 
   <!-- line 7 -->
-  <div class="type-line" style="--n:27; --dur:calc(var(--n)*0.035s); --delay:8.9s;">
+  <div class="type-line" style="--n:27; --dur:calc(var(--n)*0.035s); --delay:9.4s;">
     - 🤖 <strong>AI & LLM for Building</strong>
   </div>
 
@@ -62,7 +62,7 @@ redirect_from:
   </div>
 
   <!-- line 10 -->
-  <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:13s;">
+  <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:13.5s;">
     📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>
   </div>
 
