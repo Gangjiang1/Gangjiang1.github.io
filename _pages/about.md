@@ -23,11 +23,11 @@ redirect_from:
 
   <!-- line 2 -->
   <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:0.525s;">
-    👨🏻‍💻 I'm a third-year PhD candidate at The University of Utah, expecting to graduate in
+    👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in
   </div>
 
   <!-- line 3 -->
-  <div class="type-line" style="--n:10; --dur:calc(var(--n)*0.035s); --delay:3.825s;">
+  <div class="type-line" style="--n:12; --dur:calc(var(--n)*0.035s); --delay:3.825s;">
     June 2026.
   </div>
 
@@ -62,7 +62,7 @@ redirect_from:
   </div>
 
   <!-- line 10 -->
-  <div class="type-line" style="--n:131; --dur:calc(var(--n)*0.035s); --delay:14.865s;">
+  <div class="type-line" style="--n:100; --dur:calc(var(--n)*0.035s); --delay:14.865s;">
     📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>.
   </div>
 
