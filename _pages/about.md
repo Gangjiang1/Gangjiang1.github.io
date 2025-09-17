@@ -15,50 +15,62 @@ redirect_from:
   </div>
 
   <div class="llm-terminal__screen">
+
   <!-- line 1 -->
-  <div class="type-line" data-text="> Gang's Intro:" 
-       style="--n:15; --dur:calc(var(--n)*0.035s); --delay:0s;"></div>
+  <div class="type-line" style="--n:15; --dur:calc(var(--n)*0.035s); --delay:0s;">
+    > Gang's Intro:
+  </div>
 
   <!-- line 2 -->
-  <div class="type-line" data-text="👨🏻‍💻 I'm a third-year PhD candidate at The University of Utah, expecting to graduate in" 
-       style="--n:113; --dur:calc(var(--n)*0.035s); --delay:0.825s;"></div>
-       
-  <!-- line 2.5 -->
-  <div class="type-line" data-text="June 2026." 
-       style="--n:113; --dur:calc(var(--n)*0.035s); --delay:0.825s;"></div>
+  <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:0.525s;">
+    👨🏻‍💻 I'm a third-year PhD candidate at The University of Utah, expecting to graduate in
+  </div>
 
   <!-- line 3 -->
-  <div class="type-line" data-text="I am open to work, including <em>AP track, PostDoc, and industry research positions</em>. Please feel free to reach out!" 
-       style="--n:124; --dur:calc(var(--n)*0.035s); --delay:4.755s;"></div>
-       
-  <!-- line 3.5 -->
-  <div class="type-line" data-text="Please feel free to reach out!" 
-       style="--n:124; --dur:calc(var(--n)*0.035s); --delay:4.755s;"></div>
-       
+  <div class="type-line" style="--n:10; --dur:calc(var(--n)*0.035s); --delay:3.825s;">
+    June 2026.
+  </div>
+
   <!-- line 4 -->
-  <div class="type-line" data-text="📍 My research interests:" 
-       style="--n:28; --dur:calc(var(--n)*0.035s); --delay:9.095s;"></div>
+  <div class="type-line" style="--n:112; --dur:calc(var(--n)*0.035s); --delay:4.175s;">
+    I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
+  </div>
 
   <!-- line 5 -->
-  <div class="type-line" data-text="- 🤖 **AI & LLM for Building**" 
-       style="--n:33; --dur:calc(var(--n)*0.035s); --delay:10.075s;"></div>
+  <div class="type-line" style="--n:36; --dur:calc(var(--n)*0.035s); --delay:8.095s;">
+    Please feel free to reach out!
+  </div>
 
   <!-- line 6 -->
-  <div class="type-line" data-text="- ⚙️ **Physics-Informed Modeling**" 
-       style="--n:40; --dur:calc(var(--n)*0.035s); --delay:11.230s;"></div>
+  <div class="type-line" style="--n:28; --dur:calc(var(--n)*0.035s); --delay:9.36s;">
+    📍 My research interests:
+  </div>
 
   <!-- line 7 -->
-  <div class="type-line" data-text="- 🏙 **(Urban) Building Energy Modeling & Calibration**." 
-       style="--n:62; --dur:calc(var(--n)*0.035s); --delay:12.630s;"></div>
+  <div class="type-line" style="--n:30; --dur:calc(var(--n)*0.035s); --delay:10.345s;">
+    - 🤖 <strong>AI & LLM for Building</strong>
+  </div>
 
   <!-- line 8 -->
-  <div class="type-line" data-text="📌 I'm currently developing **auto-building energy modeling (ABEM) using large language models (LLMs)** to improve **modeling accessibility & scalability**." 
-       style="--n:145; --dur:calc(var(--n)*0.035s); --delay:14.790s;"></div>
-       
-  <!-- line 8.5 -->
-  <div class="type-line" data-text="models (LLMs)** to improve **modeling accessibility & scalability**." 
-       style="--n:145; --dur:calc(var(--n)*0.035s); --delay:14.790s;"></div>
-       
+  <div class="type-line" style="--n:38; --dur:calc(var(--n)*0.035s); --delay:11.4s;">
+    - ⚙️ <strong>Physics-Informed Modeling</strong>
+  </div>
+
+  <!-- line 9 -->
+  <div class="type-line" style="--n:61; --dur:calc(var(--n)*0.035s); --delay:12.73s;">
+    - 🏙 <strong>(Urban) Building Energy Modeling & Calibration</strong>.
+  </div>
+
+  <!-- line 10 -->
+  <div class="type-line" style="--n:131; --dur:calc(var(--n)*0.035s); --delay:14.865s;">
+    📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language models (LLMs)</strong> to improve <strong>modeling accessibility & scalability</strong>.
+  </div>
+
+  <!-- line 11 -->
+  <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:19.465s;">
+    models (LLMs) to improve <strong>modeling accessibility & scalability</strong>.
+  </div>
+
 </div>
 
   <div class="llm-terminal__prompt">
