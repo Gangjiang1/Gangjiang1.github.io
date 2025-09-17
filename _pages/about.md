@@ -11,7 +11,7 @@ redirect_from:
 <div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
   <div class="llm-terminal__bar">
     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-    <span class="title">Large language model running...</span>
+    <span class="title"></span>
   </div>
 
   <div class="llm-terminal__screen">
@@ -74,8 +74,8 @@ redirect_from:
 </div>
 
   <div class="llm-terminal__prompt">
-    <span class="prompt">$</span>
-    <span>~</span>
+    <span class="prompt">[gang@homepage:Intro]$</span>
+    <span></span>
     <span class="cursor" aria-hidden="true"></span>
   </div>
 </div>
