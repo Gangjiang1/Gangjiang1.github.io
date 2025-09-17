@@ -75,10 +75,24 @@ redirect_from:
 
   <div class="llm-terminal__prompt">
     <span class="prompt">gang@home:~$</span>
-    <span>█</span>
-    <span class="cursor" aria-hidden="true"></span>
+    <span class="cursor" aria-hidden="true">█</span>
   </div>
 </div>
+
+.prompt-symbol {
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  margin-right: 4px;
+}
+
+.cursor {
+  color: white;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
 
 <style>
 .llm-terminal{
