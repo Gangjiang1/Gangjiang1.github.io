@@ -16,58 +16,58 @@ redirect_from:
 
   <div class="llm-terminal__screen">
 
-  <!-- line 1 -->
-  <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:0.3s;">
+  <!-- line 1: +1s -->
+  <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:1s;">
     > Gang's Intro:
   </div>
 
-  <!-- line 2 -->
-  <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:0.825s;">
+  <!-- line 2: +1s -->
+  <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:1.56s;">
     👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in
   </div>
 
-  <!-- line 3 -->
-  <div class="type-line" style="--n:11; --dur:calc(var(--n)*0.035s); --delay:3.815s;">
+  <!-- line 3: normal -->
+  <div class="type-line" style="--n:11; --dur:calc(var(--n)*0.035s); --delay:4.85s;">
     June 2026.
   </div>
 
-  <!-- line 4 -->
-  <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:4.8s;">
+  <!-- line 4: +1s -->
+  <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:5.23s;">
     I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
   </div>
 
-  <!-- line 5 -->
-  <div class="type-line" style="--n:31; --dur:calc(var(--n)*0.035s); --delay:7.095s;">
+  <!-- line 5: normal -->
+  <div class="type-line" style="--n:31; --dur:calc(var(--n)*0.035s); --delay:8.07s;">
     Please feel free to reach out!
   </div>
 
-  <!-- line 6 -->
-  <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:8.50s;">
+  <!-- line 6: +1s -->
+  <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:9.16s;">
     📍 My research interests:
   </div>
 
-  <!-- line 7 -->
-  <div class="type-line" style="--n:27; --dur:calc(var(--n)*0.035s); --delay:9.4s;">
+  <!-- line 7: +1s -->
+  <div class="type-line" style="--n:27; --dur:calc(var(--n)*0.035s); --delay:10.08s;">
     - 🤖 <strong>AI & LLM for Building</strong>
   </div>
 
-  <!-- line 8 -->
-  <div class="type-line" style="--n:32; --dur:calc(var(--n)*0.035s); --delay:9.8s;">
+  <!-- line 8: normal -->
+  <div class="type-line" style="--n:32; --dur:calc(var(--n)*0.035s); --delay:11.02s;">
     - ⚙️ <strong>Physics-Informed Modeling</strong>
   </div>
 
-  <!-- line 9 -->
-  <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:11.0s;">
+  <!-- line 9: normal -->
+  <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:12.14s;">
     - 🏙 <strong>(Urban) Building Energy Modeling & Calibration</strong>.
   </div>
 
-  <!-- line 10 -->
-  <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:13.5s;">
+  <!-- line 10: +1s -->
+  <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:14.16s;">
     📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>
   </div>
 
-  <!-- line 11 -->
-  <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:16.00s;">
+  <!-- line 11: normal -->
+  <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:17.24s;">
     <strong>models (LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
   </div>
 
