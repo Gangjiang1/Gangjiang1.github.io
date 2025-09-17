@@ -27,7 +27,7 @@ redirect_from:
   </div>
 
   <!-- line 3: normal -->
-  <div class="type-line" style="--n:11; --dur:calc(var(--n)*0.035s); --delay:4.85s;">
+  <div class="type-line" style="--n:12; --dur:calc(var(--n)*0.035s); --delay:4.85s;">
     June 2026.
   </div>
 
