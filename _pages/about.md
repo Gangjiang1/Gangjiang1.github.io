@@ -201,6 +201,7 @@ redirect_from:
 <!-- Left Column -->
 <div style="flex: 1 1 300px; min-width: 280px;">
 
+  
 <a href="https://github.com/Gangjiang1/EPlus-LLM" target="_blank"><strong>EPlus-LLMv1/v2</strong></a>:  
 LLM-driven automatic building energy modeling through natural language.  
 <br><br>  
@@ -212,7 +213,7 @@ A comprehensive guideline for prompt engineering of LLMs in auto-building energy
 <!-- Right Column -->
 <div style="flex: 0 0 420px; text-align: right;">
   <figure style="margin: 0;">
-    <img src="/images/graphic.png" alt="Illustration of LLM for Auto-building modeling" width="380px" style="max-width: 100%; height: auto; border-radius: 10px;">
+    <img src="/images/graphic.png" alt="Illustration of LLM for Auto-building modeling" width="420px" style="max-width: 100%; height: auto; border-radius: 10px;">
     <figcaption style="font-size: 14px; color: #666; margin-top: 8px; padding-left: 1.5em;">
       <em>Figure: LLM-Powered Auto-Building Modeling Workflow</em>
     </figcaption>
