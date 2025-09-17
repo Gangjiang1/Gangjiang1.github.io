@@ -11,73 +11,138 @@ redirect_from:
 <div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
   <div class="llm-terminal__bar">
     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-    <span class="title"></span>
+    <span class="title">Large language model running...</span>
   </div>
 
   <div class="llm-terminal__screen">
 
-  <!-- line 1: +1s -->
-  <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:1s;">
-    > Gang's Intro:
-  </div>
+    <!-- line 1: +1s -->
+    <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:1s;">
+      > Gang's Intro:
+    </div>
 
-  <!-- line 2: +1s -->
-  <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:1.56s;">
-    👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in
-  </div>
+    <!-- line 2: +1s -->
+    <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:1.56s;">
+      👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in
+    </div>
 
-  <!-- line 3: normal -->
-  <div class="type-line" style="--n:12; --dur:calc(var(--n)*0.035s); --delay:4.85s;">
-    June 2026.
-  </div>
+    <!-- line 3: normal -->
+    <div class="type-line" style="--n:12; --dur:calc(var(--n)*0.035s); --delay:4.85s;">
+      June 2026.
+    </div>
 
-  <!-- line 4: +1s -->
-  <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:5.23s;">
-    I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
-  </div>
+    <!-- line 4: +1s -->
+    <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:5.23s;">
+      I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
+    </div>
 
-  <!-- line 5: normal -->
-  <div class="type-line" style="--n:31; --dur:calc(var(--n)*0.035s); --delay:8.07s;">
-    Please feel free to reach out!
-  </div>
+    <!-- line 5: normal -->
+    <div class="type-line" style="--n:31; --dur:calc(var(--n)*0.035s); --delay:8.07s;">
+      Please feel free to reach out!
+    </div>
 
-  <!-- line 6: +1s -->
-  <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:9.16s;">
-    📍 My research interests:
-  </div>
+    <!-- line 6: +1s -->
+    <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:9.16s;">
+      📍 My research interests:
+    </div>
 
-  <!-- line 7: +1s -->
-  <div class="type-line" style="--n:27; --dur:calc(var(--n)*0.035s); --delay:10.08s;">
-    - 🤖 <strong>AI & LLM for Building Science</strong>
-  </div>
+    <!-- line 7: +1s -->
+    <div class="type-line" style="--n:27; --dur:calc(var(--n)*0.035s); --delay:10.08s;">
+      - 🤖 <strong>AI & LLM for Building Science</strong>
+    </div>
 
-  <!-- line 8: normal -->
-  <div class="type-line" style="--n:39; --dur:calc(var(--n)*0.035s); --delay:11.02s;">
-    - ⚙️ <strong>Physics-Informed Machine Learning</strong>
-  </div>
+    <!-- line 8: normal -->
+    <div class="type-line" style="--n:39; --dur:calc(var(--n)*0.035s); --delay:11.02s;">
+      - ⚙️ <strong>Physics-Informed Machine Learning</strong>
+    </div>
 
-  <!-- line 9: normal -->
-  <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:12.39s;">
-    - 🏙 <strong>(Urban) Building Energy Modeling & Calibration</strong>.
-  </div>
+    <!-- line 9: normal -->
+    <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:12.39s;">
+      - 🏙 <strong>(Urban) Building Energy Modeling & Calibration</strong>.
+    </div>
 
-  <!-- line 10: +1s -->
-  <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:14.16s;">
-    📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>
-  </div>
+    <!-- line 10: +1s -->
+    <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:14.16s;">
+      📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>
+    </div>
 
-  <!-- line 11: normal -->
-  <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:17.24s;">
-    <strong>models (LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
-  </div>
+    <!-- line 11: normal -->
+    <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:17.24s;">
+      <strong>models (LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
+    </div>
 
-</div>
+  </div>
 
   <div class="llm-terminal__prompt">
-    <span class="prompt">gang@home:~$</span>
+    <span class="prompt-symbol">gang@home:~$</span>
     <span class="cursor" aria-hidden="true">█</span>
   </div>
 </div>
+
+<style>
+/* -------------------- Terminal UI Styling -------------------- */
+.llm-terminal {
+  --bg: #0d1117;
+  --fg: #d1d5da;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.llm-terminal__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #30363d;
+  background: #161b22;
+}
+
+.llm-terminal .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.llm-terminal .dot.red {
+  background: #ff5f56;
+}
+.llm-terminal .dot.yellow {
+  background: #ffbd2e;
+}
+.llm-terminal .dot.green {
+  background: #27c93f;
+}
+
+.llm-terminal .title {
+  color: var(--muted);
+  margin-left: 6px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.llm-terminal__screen {
+  padding: 14px 16px;
+  min-height: 260px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}
+
+.llm-terminal__prompt {
+  border-top: 1px dashed #30363d;
+  padding: 10px 16px;
+  color: var(--muted);
+}
 
 .prompt-symbol {
   color: #00ff00;
@@ -91,56 +156,48 @@ redirect_from:
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
-<style>
-.llm-terminal{
-  --bg:#0d1117; --fg:#d1d5da; --muted:#8b949e; --accent:#58a6ff;
-  border:1px solid #30363d; border-radius:12px; background:var(--bg); color:var(--fg);
-  font:14px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  box-shadow:0 12px 30px rgba(0,0,0,.25); overflow:hidden
-}
-.llm-terminal__bar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #30363d;background:#161b22}
-.llm-terminal .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
-.llm-terminal .dot.red{background:#ff5f56}.llm-terminal .dot.yellow{background:#ffbd2e}.llm-terminal .dot.green{background:#27c93f}
-.llm-terminal .title{color:var(--muted);margin-left:6px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.llm-terminal__screen{padding:14px 16px;min-height:260px;white-space:pre-wrap;word-break:break-word;margin:0}
-.llm-terminal__prompt{border-top:1px dashed #30363d;padding:10px 16px;color:var(--muted)}
-.llm-terminal .prompt{color:var(--accent);margin-right:6px}
-
-/* 核心：纯 CSS 逐字打字（多行） */
-.type-line{
+/* -------------------- Typewriter Effect -------------------- */
+.type-line {
   position: relative;
-  display:block;
-  font-variant-ligatures:none;
+  display: block;
+  font-variant-ligatures: none;
   white-space: pre;
   overflow: hidden;
   width: 0ch;
-  border-right: 2px solid var(--fg);  /* 初始光标 */
-  animation: 
+  border-right: 2px solid var(--fg);
+  animation:
     typing var(--dur) steps(var(--n)) forwards,
-    caret var(--dur) steps(1) forwards; /* caret 和 typing 同步，结束后停止 */
+    caret var(--dur) steps(1) forwards;
   animation-delay: var(--delay), var(--delay);
 }
-.type-line::before{
-  content: attr(data-text);
-}
 
-/* 光标动画：typing 过程中闪烁，结束后变透明（隐藏） */
 @keyframes caret {
-  0%, 49%  { border-right-color: var(--fg); }
-  50%, 100%{ border-right-color: transparent; }
+  0%, 49% {
+    border-right-color: var(--fg);
+  }
+  50%, 100% {
+    border-right-color: transparent;
+  }
 }
 
-/* 逐字动画：增长到 n 个字符宽 */
 @keyframes typing {
-  from { width: 0ch; }
-  to   { width: calc(var(--n) * 1ch); }
+  from {
+    width: 0ch;
+  }
+  to {
+    width: calc(var(--n) * 1ch);
+  }
 }
 
-/* 全局暗色方案 */
-:root{ color-scheme: dark; }
+/* Global dark mode hint */
+:root {
+  color-scheme: dark;
+}
 </style>
 
 ## 🖇 Open-Source Contributions
