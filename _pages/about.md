@@ -17,7 +17,7 @@ redirect_from:
   <div class="llm-terminal__screen">
 
   <!-- line 1 -->
-  <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:0s;">
+  <div class="type-line" style="--n:15; --dur:calc(var(--n)*0.035s); --delay:0s;">
     > Gang's Intro:
   </div>
 
@@ -27,47 +27,47 @@ redirect_from:
   </div>
 
   <!-- line 3 -->
-  <div class="type-line" style="--n:12; --dur:calc(var(--n)*0.035s); --delay:3.825s;">
+  <div class="type-line" style="--n:11; --dur:calc(var(--n)*0.035s); --delay:3.815s;">
     June 2026.
   </div>
 
   <!-- line 4 -->
-  <div class="type-line" style="--n:80; --dur:calc(var(--n)*0.035s); --delay:4.175s;">
+  <div class="type-line" style="--n:80; --dur:calc(var(--n)*0.035s); --delay:4.2s;">
     I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
   </div>
 
   <!-- line 5 -->
-  <div class="type-line" style="--n:36; --dur:calc(var(--n)*0.035s); --delay:6.095s;">
+  <div class="type-line" style="--n:30; --dur:calc(var(--n)*0.035s); --delay:7.095s;">
     Please feel free to reach out!
   </div>
 
   <!-- line 6 -->
-  <div class="type-line" style="--n:28; --dur:calc(var(--n)*0.035s); --delay:9.36s;">
+  <div class="type-line" style="--n:25; --dur:calc(var(--n)*0.035s); --delay:8.00s;">
     📍 My research interests:
   </div>
 
   <!-- line 7 -->
-  <div class="type-line" style="--n:30; --dur:calc(var(--n)*0.035s); --delay:10.345s;">
+  <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:8.9s;">
     - 🤖 <strong>AI & LLM for Building</strong>
   </div>
 
   <!-- line 8 -->
-  <div class="type-line" style="--n:38; --dur:calc(var(--n)*0.035s); --delay:11.4s;">
+  <div class="type-line" style="--n:32; --dur:calc(var(--n)*0.035s); --delay:9.8s;">
     - ⚙️ <strong>Physics-Informed Modeling</strong>
   </div>
 
   <!-- line 9 -->
-  <div class="type-line" style="--n:61; --dur:calc(var(--n)*0.035s); --delay:12.73s;">
+  <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:11.0s;">
     - 🏙 <strong>(Urban) Building Energy Modeling & Calibration</strong>.
   </div>
 
   <!-- line 10 -->
-  <div class="type-line" style="--n:78; --dur:calc(var(--n)*0.035s); --delay:11.865s;">
+  <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:13s;">
     📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>
   </div>
 
   <!-- line 11 -->
-  <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:19.465s;">
+  <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:16.00s;">
     <strong>models (LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
   </div>
 
