@@ -80,7 +80,7 @@ redirect_from:
 </div>
 
 <audio id="typing-sound" preload="auto">
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7991269b49.mp3?filename=keyboard-typing-18562.mp3" type="audio/mpeg">
+  <source src="https://assets.mixkit.co/active_storage/sfx/1104/1104-preview.mp3" type="audio/mpeg">
 </audio>
 
 <style>
