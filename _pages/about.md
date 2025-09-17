@@ -13,6 +13,10 @@ redirect_from:
     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
     <span class="title">Terminal</span>
   </div>
+    <!-- line 1: +1s -->
+    <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:1s;">
+      > Gang's Intro:
+    </div>
 
     <!-- line 2: +1s -->
     <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:1.56s;">
