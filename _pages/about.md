@@ -218,7 +218,7 @@ A comprehensive guideline for prompt engineering of LLMs in auto-building energy
     </figcaption>
   </figure>
 </div>
-
+</div>
 
 ## 🔬 Experience
 🚀 Currently, I am collaborating with [Dr. Shandian Zhe](https://users.cs.utah.edu/~zhe/) (School of Computing, University of Utah) on NSF projects focused on improving LLMs' accuracy, computational efficiency, and robustness.
