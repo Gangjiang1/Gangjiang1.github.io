@@ -11,7 +11,7 @@ redirect_from:
 <div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
   <div class="llm-terminal__bar">
     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-    <span class="title">gang@about.md — llm run</span>
+    <span class="title">Large language model running...</span>
   </div>
 
   <div class="llm-terminal__screen">
@@ -63,19 +63,19 @@ redirect_from:
 
   <!-- line 10 -->
   <div class="type-line" style="--n:131; --dur:calc(var(--n)*0.035s); --delay:14.865s;">
-    📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language models (LLMs)</strong> to improve <strong>modeling accessibility & scalability</strong>.
+    📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong> to improve <strong>modeling accessibility & scalability</strong>.
   </div>
 
   <!-- line 11 -->
   <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:19.465s;">
-    models (LLMs) to improve <strong>modeling accessibility & scalability</strong>.
+    <strong>models (LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
   </div>
 
 </div>
 
   <div class="llm-terminal__prompt">
     <span class="prompt">$</span>
-    <span>chatgpt.generate("about_gang")</span>
+    <span>~</span>
     <span class="cursor" aria-hidden="true"></span>
   </div>
 </div>
