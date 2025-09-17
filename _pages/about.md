@@ -75,7 +75,7 @@ redirect_from:
 
   <div class="llm-terminal__prompt">
     <span class="prompt">[gang@homepage:Intro]$</span>
-    <span></span>
+    <span>█</span>
     <span class="cursor" aria-hidden="true"></span>
   </div>
 </div>
