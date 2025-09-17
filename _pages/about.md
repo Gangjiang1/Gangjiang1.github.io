@@ -208,23 +208,40 @@ redirect_from:
 document.addEventListener("DOMContentLoaded", () => {
   const lines = document.querySelectorAll(".type-line");
   const sound = document.getElementById("typing-sound");
+  let audioUnlocked = false;
 
-  lines.forEach((line) => {
-    const delay = parseFloat(getComputedStyle(line).getPropertyValue("--delay")) * 1000;
-    const duration = parseFloat(getComputedStyle(line).getPropertyValue("--dur")) * 1000;
+  const unlockAudio = () => {
+    if (audioUnlocked) return;
+    audioUnlocked = true;
+    sound.volume = 0;
+    sound.play().then(() => {
+      sound.pause();
+      sound.volume = 1;
+      playTypingSoundPerLine();
+    }).catch(e => {
+      console.warn("Audio unlock failed:", e);
+    });
+    window.removeEventListener("click", unlockAudio);
+    window.removeEventListener("keydown", unlockAudio);
+  };
 
-    setTimeout(() => {
-      // 每次播放时重置音频（从头开始）
-      sound.currentTime = 0;
-      sound.play();
+  window.addEventListener("click", unlockAudio);
+  window.addEventListener("keydown", unlockAudio);
 
-      // 在打字完后 100ms 静音
+  function playTypingSoundPerLine() {
+    lines.forEach((line) => {
+      const delay = parseFloat(getComputedStyle(line).getPropertyValue("--delay")) * 1000;
+      const duration = parseFloat(getComputedStyle(line).getPropertyValue("--dur")) * 1000;
+
       setTimeout(() => {
-        sound.pause();
-      }, duration + 100);
-
-    }, delay);
-  });
+        sound.currentTime = 0;
+        sound.play();
+        setTimeout(() => {
+          sound.pause();
+        }, duration + 100);
+      }, delay);
+    });
+  }
 });
 </script>
 
