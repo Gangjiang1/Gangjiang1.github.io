@@ -17,7 +17,7 @@ redirect_from:
   <div class="llm-terminal__screen">
 
   <!-- line 1 -->
-  <div class="type-line" style="--n:15; --dur:calc(var(--n)*0.035s); --delay:0s;">
+  <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:0s;">
     > Gang's Intro:
   </div>
 
@@ -63,7 +63,7 @@ redirect_from:
 
   <!-- line 10 -->
   <div class="type-line" style="--n:131; --dur:calc(var(--n)*0.035s); --delay:14.865s;">
-    📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong> to improve <strong>modeling accessibility & scalability</strong>.
+    📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>.
   </div>
 
   <!-- line 11 -->
