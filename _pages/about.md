@@ -52,12 +52,12 @@ redirect_from:
   </div>
 
   <!-- line 8: normal -->
-  <div class="type-line" style="--n:32; --dur:calc(var(--n)*0.035s); --delay:11.02s;">
+  <div class="type-line" style="--n:39; --dur:calc(var(--n)*0.035s); --delay:11.02s;">
     - ⚙️ <strong>Physics-Informed Machine Learning</strong>
   </div>
 
   <!-- line 9: normal -->
-  <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:12.14s;">
+  <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:12.39s;">
     - 🏙 <strong>(Urban) Building Energy Modeling & Calibration</strong>.
   </div>
 
