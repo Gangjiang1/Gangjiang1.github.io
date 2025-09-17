@@ -17,7 +17,7 @@ redirect_from:
   <div class="llm-terminal__screen">
 
   <!-- line 1 -->
-  <div class="type-line" style="--n:15; --dur:calc(var(--n)*0.035s); --delay:0s;">
+  <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:0s;">
     > Gang's Intro:
   </div>
 
@@ -37,7 +37,7 @@ redirect_from:
   </div>
 
   <!-- line 5 -->
-  <div class="type-line" style="--n:30; --dur:calc(var(--n)*0.035s); --delay:7.095s;">
+  <div class="type-line" style="--n:31; --dur:calc(var(--n)*0.035s); --delay:7.095s;">
     Please feel free to reach out!
   </div>
 
