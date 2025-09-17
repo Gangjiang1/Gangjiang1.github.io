@@ -79,10 +79,6 @@ redirect_from:
   </div>
 </div>
 
-<audio id="typing-sound" preload="auto">
-  <source src="https://assets.mixkit.co/active_storage/sfx/1104/1104-preview.mp3" type="audio/mpeg">
-</audio>
-
 <style>
 /* -------------------- Terminal UI Styling -------------------- */
 .llm-terminal {
@@ -203,47 +199,6 @@ redirect_from:
   color-scheme: dark;
 }
 </style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const lines = document.querySelectorAll(".type-line");
-  const sound = document.getElementById("typing-sound");
-  let audioUnlocked = false;
-
-  const unlockAudio = () => {
-    if (audioUnlocked) return;
-    audioUnlocked = true;
-    sound.volume = 0;
-    sound.play().then(() => {
-      sound.pause();
-      sound.volume = 1;
-      playTypingSoundPerLine();
-    }).catch(e => {
-      console.warn("Audio unlock failed:", e);
-    });
-    window.removeEventListener("click", unlockAudio);
-    window.removeEventListener("keydown", unlockAudio);
-  };
-
-  window.addEventListener("click", unlockAudio);
-  window.addEventListener("keydown", unlockAudio);
-
-  function playTypingSoundPerLine() {
-    lines.forEach((line) => {
-      const delay = parseFloat(getComputedStyle(line).getPropertyValue("--delay")) * 1000;
-      const duration = parseFloat(getComputedStyle(line).getPropertyValue("--dur")) * 1000;
-
-      setTimeout(() => {
-        sound.currentTime = 0;
-        sound.play();
-        setTimeout(() => {
-          sound.pause();
-        }, duration + 100);
-      }, delay);
-    });
-  }
-});
-</script>
 
 ## 🖇 Open-Source Contributions
 
