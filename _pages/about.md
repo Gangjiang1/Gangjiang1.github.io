@@ -11,7 +11,7 @@ redirect_from:
 <div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
   <div class="llm-terminal__bar">
     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-    <span class="title">Large language model running...</span>
+    <span class="title">Terminal</span>
   </div>
 
   <div class="llm-terminal__screen">
