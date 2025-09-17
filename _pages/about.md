@@ -57,12 +57,12 @@ redirect_from:
 
     <!-- line 10: +1s -->
     <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:14.16s;">
-      📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>
+      📌 I'm developing <strong>auto-building energy modeling (ABEM) using large language models</strong>
     </div>
 
     <!-- line 11: normal -->
     <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:17.24s;">
-      <strong>models (LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
+      <strong>(LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
     </div>
 
   </div>
