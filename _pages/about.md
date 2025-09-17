@@ -32,7 +32,7 @@ redirect_from:
   </div>
 
   <!-- line 4 -->
-  <div class="type-line" style="--n:80; --dur:calc(var(--n)*0.035s); --delay:4.2s;">
+  <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:4.2s;">
     I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
   </div>
 
@@ -42,12 +42,12 @@ redirect_from:
   </div>
 
   <!-- line 6 -->
-  <div class="type-line" style="--n:25; --dur:calc(var(--n)*0.035s); --delay:8.00s;">
+  <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:8.00s;">
     📍 My research interests:
   </div>
 
   <!-- line 7 -->
-  <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:8.9s;">
+  <div class="type-line" style="--n:27; --dur:calc(var(--n)*0.035s); --delay:8.9s;">
     - 🤖 <strong>AI & LLM for Building</strong>
   </div>
 
