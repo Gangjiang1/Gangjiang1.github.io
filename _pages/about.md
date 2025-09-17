@@ -32,7 +32,7 @@ redirect_from:
   </div>
 
   <!-- line 4 -->
-  <div class="type-line" style="--n:112; --dur:calc(var(--n)*0.035s); --delay:4.175s;">
+  <div class="type-line" style="--n:80; --dur:calc(var(--n)*0.035s); --delay:4.175s;">
     I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
   </div>
 
@@ -62,8 +62,8 @@ redirect_from:
   </div>
 
   <!-- line 10 -->
-  <div class="type-line" style="--n:100; --dur:calc(var(--n)*0.035s); --delay:14.865s;">
-    📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>.
+  <div class="type-line" style="--n:78; --dur:calc(var(--n)*0.035s); --delay:14.865s;">
+    📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>
   </div>
 
   <!-- line 11 -->
