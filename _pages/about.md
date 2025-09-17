@@ -200,7 +200,7 @@ redirect_from:
 
 <!-- Left Column -->
 <div style="flex: 1 1 300px; min-width: 280px;">
-<br><br>  
+<br>  
 <a href="https://github.com/Gangjiang1/EPlus-LLM" target="_blank"><strong>EPlus-LLMv1/v2</strong></a>:  
 LLM-driven automatic building energy modeling through natural language.  
 <br><br>  
