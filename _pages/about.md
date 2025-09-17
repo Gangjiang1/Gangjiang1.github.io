@@ -14,6 +14,7 @@ redirect_from:
     <span class="title">Terminal</span>
   </div>
 
+  <div class="llm-terminal__screen">
     <!-- line 1: +1s -->
     <div class="type-line" style="--n:16; --dur:calc(var(--n)*0.035s); --delay:1s;">
       > Gang's Intro:
