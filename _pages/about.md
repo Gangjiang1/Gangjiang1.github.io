@@ -200,6 +200,34 @@ redirect_from:
 }
 </style>
 
+<audio id="typing-sound" preload="auto">
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7991269b49.mp3?filename=keyboard-typing-18562.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const lines = document.querySelectorAll(".type-line");
+  const sound = document.getElementById("typing-sound");
+
+  lines.forEach((line) => {
+    const delay = parseFloat(getComputedStyle(line).getPropertyValue("--delay")) * 1000;
+    const duration = parseFloat(getComputedStyle(line).getPropertyValue("--dur")) * 1000;
+
+    setTimeout(() => {
+      // 每次播放时重置音频（从头开始）
+      sound.currentTime = 0;
+      sound.play();
+
+      // 在打字完后 100ms 静音
+      setTimeout(() => {
+        sound.pause();
+      }, duration + 100);
+
+    }, delay);
+  });
+});
+</script>
+
 ## 🖇 Open-Source Contributions
 
 <div style="display: flex; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
