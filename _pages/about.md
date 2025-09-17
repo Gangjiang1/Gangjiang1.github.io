@@ -214,7 +214,7 @@ A comprehensive guideline for prompt engineering of LLMs in auto-building energy
   <figure style="margin: 0;">
     <img src="/images/graphic.png" alt="Illustration of LLM for Auto-building modeling" width="420px" style="max-width: 100%; height: auto; border-radius: 10px;">
     <figcaption style="font-size: 14px; color: #666; margin-top: 8px;">
-      <em>Figure: LLM-Powered Auto-Building Modeling Workflow</em>
+      <em>     Figure: LLM-Powered Auto-Building Modeling Workflow</em>
     </figcaption>
   </figure>
 </div>
