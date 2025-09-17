@@ -37,7 +37,7 @@ redirect_from:
   </div>
 
   <!-- line 5 -->
-  <div class="type-line" style="--n:36; --dur:calc(var(--n)*0.035s); --delay:8.095s;">
+  <div class="type-line" style="--n:36; --dur:calc(var(--n)*0.035s); --delay:6.095s;">
     Please feel free to reach out!
   </div>
 
@@ -62,7 +62,7 @@ redirect_from:
   </div>
 
   <!-- line 10 -->
-  <div class="type-line" style="--n:78; --dur:calc(var(--n)*0.035s); --delay:14.865s;">
+  <div class="type-line" style="--n:78; --dur:calc(var(--n)*0.035s); --delay:11.865s;">
     📌 I'm currently developing <strong>auto-building energy modeling (ABEM) using large language</strong>
   </div>
 
