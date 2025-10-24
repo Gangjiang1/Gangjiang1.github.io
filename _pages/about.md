@@ -235,9 +235,9 @@ I’ll be giving two presentations:
 (1) Large language models for automated building energy modeling (invited talk)  
 (2) Real-world applications of the EPlus-LLM Platform (paper session)
 
-🎤 Aug. 2025 – Online talk on BuildNext: **Toward Automated Building Energy Modeling with Large Language Models** [Slides](/files/Gang_LLM_ABEM_Slides.pdf)
+🎤 Oct. 2025 – Online talk on BuildNext: **Toward Automated Building Energy Modeling with Large Language Models** [Slides](/files/Gang_LLM_ABEM_Slides.pdf)
 
-🎤 Aug. 2025 – I was invited to give a speech at *ASHRAE CIDCO Conference* in Denver, CO! Topic: **Automating Building Energy Modeling from Natural Language** [Slides](/files/2025-cidco-ABEM_NLP.pptx)
+🎤 Aug. 2025 – I was invited to give a speech at *ASHRAE CIDCO Conference* in Denver, CO! Topic: **Automating Building Energy Modeling from Natural Language**
 
 📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona. I am happy to engage in discussions and make connections!
 
