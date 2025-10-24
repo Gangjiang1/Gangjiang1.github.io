@@ -230,9 +230,9 @@ A comprehensive guideline for prompt engineering of LLMs in auto-building energy
 
 ## 🎉 News
 
-📢 Feb. 2026 – I’m excited to attend the ASHRAE Winter Conference in Las Vegas, NV! Looking forward to connecting with you there! 🌆
-I’ll be giving two presentations:
-(1) Large language models for automated building energy modeling (invited talk)
+📢 Feb. 2026 – I’m excited to attend the ASHRAE Winter Conference in Las Vegas, NV! Looking forward to connecting with you there! 🌆  
+I’ll be giving two presentations:  
+(1) Large language models for automated building energy modeling (invited talk)  
 (2) Real-world applications of the EPlus-LLM Platform (paper session)
 
 🎤 Aug. 2025 – Online talk on BuildNext: **Toward Automated Building Energy Modeling with Large Language Models** [Slides](/files/Gang_LLM_ABEM_Slides.pdf)
