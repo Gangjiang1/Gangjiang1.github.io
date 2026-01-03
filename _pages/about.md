@@ -229,6 +229,7 @@ A comprehensive guideline for prompt engineering of LLMs in auto-building energy
 ✍️ I have completed internships at [Amazon AWS](https://aws.amazon.com/), where I have gained experience in designing and operating data centers with a focus on enhancing resilience and scalability, and at [SUNAC](https://www.sunac.com.cn/en/about.aspx), where I worked in real estate management.
 
 ## 🎉 News
+📄 Dec. 2025 – First-authored paper, [Benchmarking Knowledge and Capability of Large Language Models in Building Science Domain](https://doi.org/10.59717/ipj.energy-use.2025.100026), has been published in *Energy Use*.
 
 📢 Feb. 2026 – I’m excited to attend the ASHRAE Winter Conference in Las Vegas, NV! Looking forward to connecting with you there! 🌆  
 I’ll be giving two presentations:  
