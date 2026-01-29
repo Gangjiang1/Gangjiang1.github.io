@@ -41,27 +41,27 @@ redirect_from:
     </div>
 
     <!-- line 7: +1s -->
-    <div class="type-line" style="--n:37; --dur:calc(var(--n)*0.035s); --delay:10.08s;">
+    <div class="type-line" style="--n:40; --dur:calc(var(--n)*0.035s); --delay:11.08s;">
       - 🤖 <strong>AI & LLM for Building Science</strong>
     </div>
 
     <!-- line 8: normal -->
-    <div class="type-line" style="--n:44; --dur:calc(var(--n)*0.035s); --delay:11.32s;">
+    <div class="type-line" style="--n:44; --dur:calc(var(--n)*0.035s); --delay:12.32s;">
       - ⚙️ <strong>Physics-Informed & Automated Modeling</strong>
     </div>
 
     <!-- line 9: normal -->
-    <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:12.39s;">
+    <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:13.39s;">
       - 🏙 <strong>(Urban) Building Sustainability & Resilience</strong>.
     </div>
 
     <!-- line 10: +1s -->
-    <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:14.16s;">
+    <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:15.16s;">
       📌 I'm developing <strong>auto-building energy modeling (ABEM) using large language models</strong>
     </div>
 
     <!-- line 11: normal -->
-    <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:17.24s;">
+    <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:18.24s;">
       <strong>(LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
     </div>
 
