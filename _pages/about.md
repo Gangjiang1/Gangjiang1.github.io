@@ -8,87 +8,70 @@ redirect_from:
   - /about.html
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Typing Effect</title>
-  <style>
-    .type-line {
-      font-family: monospace;
-      font-size: 18px;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation:
-        typing var(--dur) steps(var(--n)) forwards,
-        blink 1s step-end infinite;
-      animation-delay: var(--delay, 0s);
-      border-right: 2px solid currentColor;
-      margin: 6px 0;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: calc(var(--n) * 1ch) }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="type-line" style="--delay:4.85s;">
-    June 2026.
+<div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
+  <div class="llm-terminal__bar">
+    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+    <span class="title">Terminal</span>
   </div>
 
-  <div class="type-line" style="--delay:5.23s;">
-    I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
+  <div class="llm-terminal__screen">
+    <!-- line 2: +1s -->
+    <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:1.56s;">
+      👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in
+    </div>
+
+    <!-- line 3: normal -->
+    <div class="type-line" style="--n:12; --dur:calc(var(--n)*0.035s); --delay:4.85s;">
+      June 2026.
+    </div>
+
+    <!-- line 4: +1s -->
+    <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:5.23s;">
+      I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
+    </div>
+
+    <!-- line 5: normal -->
+    <div class="type-line" style="--n:31; --dur:calc(var(--n)*0.035s); --delay:8.07s;">
+      Please feel free to reach out!
+    </div>
+
+    <!-- line 6: +1s -->
+    <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:9.0s;">
+      📍 My research interests:
+    </div>
+
+    <!-- line 7: +1s -->
+    <div class="type-line" style="--n:40; --dur:calc(var(--n)*0.035s); --delay:10.0s;">
+      - 🤖 <strong>AI & LLM for Building Science</strong>
+    </div>
+
+    <!-- line 8: normal -->
+    <div class="type-line" style="--n:44; --dur:calc(var(--n)*0.035s); --delay:12.32s;">
+      - ⚙️ <strong>Physics-Informed & Automated Modeling</strong>
+    </div>
+
+    <!-- line 9: normal -->
+    <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:13.39s;">
+      - 🏙 <strong>(Urban) Building Sustainability & Resilience</strong>.
+    </div>
+
+    <!-- line 10: +1s -->
+    <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:15.16s;">
+      📌 I'm developing <strong>auto-building energy modeling (ABEM) using large language models</strong>
+    </div>
+
+    <!-- line 11: normal -->
+    <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:18.24s;">
+      <strong>(LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
+    </div>
+
   </div>
 
-  <div class="type-line" style="--delay:8.07s;">
-    Please feel free to reach out!
+  <div class="llm-terminal__prompt">
+    <span class="prompt-symbol">gang@home:~$</span>
+    <span class="cursor" aria-hidden="true">█</span>
   </div>
-
-  <div class="type-line" style="--delay:9.16s;">
-    📍 My research interests:
-  </div>
-
-  <div class="type-line" style="--delay:11.08s;">
-    - 🤖 <strong>AI & LLM for Building Science</strong>
-  </div>
-
-  <div class="type-line" style="--delay:12.32s;">
-    - ⚙️ <strong>Physics-Informed & Automated Modeling</strong>
-  </div>
-
-  <div class="type-line" style="--delay:13.39s;">
-    - 🏙 <strong>(Urban) Building Sustainability & Resilience</strong>.
-  </div>
-
-  <div class="type-line" style="--delay:15.16s;">
-    📌 I'm developing <strong>auto-building energy modeling (ABEM) using large language models</strong>
-  </div>
-
-  <div class="type-line" style="--delay:18.24s;">
-    <strong>(LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
-  </div>
-
-  <script>
-    document.querySelectorAll('.type-line').forEach(el => {
-      const text = el.textContent.trim();
-      const buffer = 5;              // 防止 emoji / 字重差异截断
-      const speed = 0.035;           // 每个字符的打字时间（秒）
-
-      el.style.setProperty('--n', text.length + buffer);
-      el.style.setProperty('--dur', `${(text.length + buffer) * speed}s`);
-    });
-  </script>
-
-</body>
-</html>
+</div>
 
 <style>
 /* -------------------- Terminal UI Styling -------------------- */
