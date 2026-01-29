@@ -41,7 +41,7 @@ redirect_from:
     </div>
 
     <!-- line 7: +1s -->
-    <div class="type-line" style="--n:27; --dur:calc(var(--n)*0.035s); --delay:10.08s;">
+    <div class="type-line" style="--n:33; --dur:calc(var(--n)*0.035s); --delay:10.08s;">
       - 🤖 <strong>AI & LLM for Building Science</strong>
     </div>
 
