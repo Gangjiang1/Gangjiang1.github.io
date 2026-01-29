@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-<div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
+<!-- <div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
   <div class="llm-terminal__bar">
     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
     <span class="title">Terminal</span>
@@ -71,7 +71,89 @@ redirect_from:
     <span class="prompt-symbol">gang@home:~$</span>
     <span class="cursor" aria-hidden="true">█</span>
   </div>
-</div>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Typing Effect</title>
+  <style>
+    .type-line {
+      font-family: monospace;
+      font-size: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation:
+        typing var(--dur) steps(var(--n)) forwards,
+        blink 1s step-end infinite;
+      animation-delay: var(--delay, 0s);
+      border-right: 2px solid currentColor;
+      margin: 6px 0;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: calc(var(--n) * 1ch) }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="type-line" style="--delay:4.85s;">
+    June 2026.
+  </div>
+
+  <div class="type-line" style="--delay:5.23s;">
+    I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
+  </div>
+
+  <div class="type-line" style="--delay:8.07s;">
+    Please feel free to reach out!
+  </div>
+
+  <div class="type-line" style="--delay:9.16s;">
+    📍 My research interests:
+  </div>
+
+  <div class="type-line" style="--delay:11.08s;">
+    - 🤖 <strong>AI & LLM for Building Science</strong>
+  </div>
+
+  <div class="type-line" style="--delay:12.32s;">
+    - ⚙️ <strong>Physics-Informed & Automated Modeling</strong>
+  </div>
+
+  <div class="type-line" style="--delay:13.39s;">
+    - 🏙 <strong>(Urban) Building Sustainability & Resilience</strong>.
+  </div>
+
+  <div class="type-line" style="--delay:15.16s;">
+    📌 I'm developing <strong>auto-building energy modeling (ABEM) using large language models</strong>
+  </div>
+
+  <div class="type-line" style="--delay:18.24s;">
+    <strong>(LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
+  </div>
+
+  <script>
+    document.querySelectorAll('.type-line').forEach(el => {
+      const text = el.textContent.trim();
+      const buffer = 5;              // 防止 emoji / 字重差异截断
+      const speed = 0.035;           // 每个字符的打字时间（秒）
+
+      el.style.setProperty('--n', text.length + buffer);
+      el.style.setProperty('--dur', `${(text.length + buffer) * speed}s`);
+    });
+  </script>
+
+</body>
+</html>
 
 <style>
 /* -------------------- Terminal UI Styling -------------------- */
