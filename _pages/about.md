@@ -46,7 +46,7 @@ redirect_from:
     </div>
 
     <!-- line 8: normal -->
-    <div class="type-line" style="--n:44; --dur:calc(var(--n)*0.035s); --delay:11.02s;">
+    <div class="type-line" style="--n:44; --dur:calc(var(--n)*0.035s); --delay:11.32s;">
       - ⚙️ <strong>Physics-Informed & Automated Modeling</strong>
     </div>
 
