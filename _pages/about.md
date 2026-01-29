@@ -229,16 +229,16 @@ A comprehensive guideline for prompt engineering of LLMs in auto-building energy
 ✍️ I have completed internships at [Amazon AWS](https://aws.amazon.com/), where I have gained experience in designing and operating data centers with a focus on enhancing resilience and scalability, and at [SUNAC](https://www.sunac.com.cn/en/about.aspx), where I worked in real estate management.
 
 ## 🎉 News
-👏 My first-authored paper, [Prompt Engineering to Inform Large Language Models in Automated Building Energy Modeling](https://doi.org/10.1016/j.energy.2025.134548), (*Energy, 2025*), has been recognized as a **Top 1% Highly Cited Paper** by ESI.
+👏 My first-authored research paper, [Prompt Engineering to Inform Large Language Models in Automated Building Energy Modeling](https://doi.org/10.1016/j.energy.2025.134548), (*Energy, 2025*), has been recognized as a **Top 1% Highly Cited Paper** by ESI.
 
-👏 My first-authored paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), (*Applied Energy, 2024*), has also been selected as a **Top 1% Highly Cited Paper** by ESI.
+👏 My first-authored research paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), (*Applied Energy, 2024*), has also been selected as a **Top 1% Highly Cited Paper** by ESI.
 
 📄 Dec. 2025 – First-authored paper, [Benchmarking Knowledge and Capability of Large Language Models in Building Science Domain](https://doi.org/10.59717/ipj.energy-use.2025.100026), has been published in *Energy Use*.
 
-📢 Feb. 2026 – I’m excited to attend the ASHRAE Winter Conference in Las Vegas, NV! Looking forward to connecting with you there! 🌆  
+📢 Feb. 2026 – I’m excited to attend the *ASHRAE Winter Conference* in Las Vegas, NV! Looking forward to connecting with you there! 🌆  
 I’ll be giving two presentations:  
-(1) Large language models for automated building energy modeling (invited talk)  
-(2) Real-world applications of the EPlus-LLM Platform (paper session)
+(1) Large language models for automated building energy modeling (**Invited Talk**)  
+(2) Real-world applications of the EPlus-LLM Platform (**Paper Session, Poster**)
 
 🎤 Oct. 2025 – Online talk on BuildNext: **Toward Automated Building Energy Modeling with Large Language Models** [Slides](/files/Gang_LLM_ABEM_Slides.pdf)
 
