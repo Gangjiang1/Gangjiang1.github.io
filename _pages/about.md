@@ -16,54 +16,55 @@ redirect_from:
 
   <div class="llm-terminal__screen">
     <!-- line 2: +1s -->
-    <div class="type-line" style="--delay:1.56s;">
+    <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:1.56s;">
       👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in
     </div>
 
     <!-- line 3: normal -->
-    <div class="type-line" style="--delay:4.85s;">
+    <div class="type-line" style="--n:12; --dur:calc(var(--n)*0.035s); --delay:4.85s;">
       June 2026.
     </div>
 
     <!-- line 4: +1s -->
-    <div class="type-line" style="--delay:5.23s;">
+    <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:5.23s;">
       I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
     </div>
 
     <!-- line 5: normal -->
-    <div class="type-line" style="--delay:8.07s;">
+    <div class="type-line" style="--n:31; --dur:calc(var(--n)*0.035s); --delay:8.07s;">
       Please feel free to reach out!
     </div>
 
     <!-- line 6: +1s -->
-    <div class="type-line" style="--delay:9.16s;">
+    <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:9.16s;">
       📍 My research interests:
     </div>
 
     <!-- line 7: +1s -->
-    <div class="type-line" style="--delay:11.08s;">
+    <div class="type-line" style="--n:45; --dur:calc(var(--n)*0.035s); --delay:11.08s;">
       - 🤖 <strong>AI & LLM for Building Science</strong>
     </div>
 
     <!-- line 8: normal -->
-    <div class="type-line" style="--delay:12.32s;">
+    <div class="type-line" style="--n:44; --dur:calc(var(--n)*0.035s); --delay:12.32s;">
       - ⚙️ <strong>Physics-Informed & Automated Modeling</strong>
     </div>
 
     <!-- line 9: normal -->
-    <div class="type-line" style="--delay:13.39s;">
+    <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:13.39s;">
       - 🏙 <strong>(Urban) Building Sustainability & Resilience</strong>.
     </div>
 
     <!-- line 10: +1s -->
-    <div class="type-line" style="--delay:15.16s;">
+    <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:15.16s;">
       📌 I'm developing <strong>auto-building energy modeling (ABEM) using large language models</strong>
     </div>
 
     <!-- line 11: normal -->
-    <div class="type-line" style="--delay:18.24s;">
+    <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:18.24s;">
       <strong>(LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
     </div>
+
   </div>
 
   <div class="llm-terminal__prompt">
@@ -71,31 +72,6 @@ redirect_from:
     <span class="cursor" aria-hidden="true">█</span>
   </div>
 </div>
-
-<script>
-  (function () {
-    const lines = document.querySelectorAll('.llm-terminal .type-line');
-
-    // 你原来用的每字符时间
-    const speed = 0.035; // seconds per character
-
-    // 给一点 buffer，避免 emoji / 字体宽度差异导致末尾被裁掉
-    const buffer = 8;
-
-    lines.forEach((el) => {
-      // 用 textContent：只取可见文本（不含 strong 标签本身）
-      const text = (el.textContent || '').trim();
-
-      // 如果有空行就跳过
-      if (!text) return;
-
-      const n = text.length + buffer;
-
-      el.style.setProperty('--n', n);
-      el.style.setProperty('--dur', `calc(var(--n) * ${speed}s)`);
-    });
-  })();
-</script>
 
 <style>
 /* -------------------- Terminal UI Styling -------------------- */
