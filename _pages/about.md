@@ -52,7 +52,7 @@ redirect_from:
 
     <!-- line 9: normal -->
     <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:13.39s;">
-      - 🏙 <strong>(Urban) Building Sustainability & Resilience</strong>.
+      - 🏙 <strong>(Urban) Building Sustainability & Resilience</strong>
     </div>
 
     <!-- line 10: +1s -->
