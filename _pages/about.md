@@ -235,15 +235,6 @@ A comprehensive guideline for prompt engineering of LLMs in auto-building energy
 
 📄 Dec. 2025 – First-authored paper, [Benchmarking Knowledge and Capability of Large Language Models in Building Science Domain](https://doi.org/10.59717/ipj.energy-use.2025.100026), has been published in *Energy Use*.
 
-📢 Feb. 2026 – I’m excited to attend the *ASHRAE Winter Conference* in Las Vegas, NV! Looking forward to connecting with you there! 🌆  
-I’ll be giving two presentations:  
-(1) Large language models for automated building energy modeling (**Invited Talk**)  
-(2) Real-world applications of the EPlus-LLM Platform (**Paper Session, Poster**)
-
-🎤 Oct. 2025 – **Online talk** on BuildNext: Toward Automated Building Energy Modeling with Large Language Models [Slides](/files/Gang_LLM_ABEM_Slides.pdf)
-
-🎤 Aug. 2025 – I was invited to give a speech at *ASHRAE CIDCO Conference* in Denver, CO! Topic: **Automating Building Energy Modeling from Natural Language**
-
 📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona. I am happy to engage in discussions and make connections!
 
 📄 Apr. 2025 – The paper related to the [EPlus-LLMv2 platform](https://doi.org/10.1016/j.autcon.2025.106223), has been accepted for publication in *Automation in Construction*.
@@ -254,8 +245,18 @@ I’ll be giving two presentations:
 
 📄 Jun. 2024 – My first-authored paper, [A Deep Learning-Based Bayesian Framework for High-Resolution Calibration of Building Energy Models](https://doi.org/10.1016/j.enbuild.2024.114755), has been published in *Energy & Buildings*.
 
-🎤 Jun. 2024 – I will be speaking about [Natural Language Auto-Modeling via Fine-tuning LLMs](https://www.proquest.com/openview/390f54178cb137415c002b116d3ffe2c/1?pq-origsite=gscholar&cbl=34619) at the *ASHRAE Annual Conference* in Indianapolis, Indiana.
-
 📄 May. 2024 – My first-authored paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), has been published in *Applied Energy*.
+
+## 🗣️ Talks
+🎤 Feb. 2026 – I’m excited to attend the *ASHRAE Winter Conference* in Las Vegas, NV! Looking forward to connecting with you there! 🌆  
+I’ll be giving two presentations:  
+(1) Large language models for automated building energy modeling (**Invited Talk**)  
+(2) Real-world applications of the EPlus-LLM Platform (**Paper Session, Poster**)
+
+🎤 Oct. 2025 – **Online talk** on BuildNext: Toward Automated Building Energy Modeling with Large Language Models [Slides](/files/Gang_LLM_ABEM_Slides.pdf)
+
+🎤 Aug. 2025 – I was invited to give a talk at *ASHRAE CIDCO Conference* in Denver, CO! Topic: **Automating Building Energy Modeling from Natural Language**
+
+🎤 Jun. 2024 – I will be speaking about [Natural Language Auto-Modeling via Fine-tuning LLMs](https://www.proquest.com/openview/390f54178cb137415c002b116d3ffe2c/1?pq-origsite=gscholar&cbl=34619) at the *ASHRAE Annual Conference* in Indianapolis, Indiana.
 
 <!-- ## 👀 ![Profile Views](https://komarev.com/ghpvc/?username=Gangjiang1&color=blue&base=1000) -->
