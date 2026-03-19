@@ -231,7 +231,7 @@ A comprehensive guideline for prompt engineering of LLMs in auto-building energy
 ## 🎉 News
 🚀 My first-authored research paper, [Prompt Engineering to Inform Large Language Models in Automated Building Energy Modeling](https://doi.org/10.1016/j.energy.2025.134548), (*Energy, 2025*), has been recognized as a **🏆 Top 1% Highly Cited Paper** by ESI.
 
-🚀 My first-authored research paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), (*Applied Energy, 2024*), has also been selected as a **🏆 Top 1% Highly Cited Paper** by ESI.
+🚀 My first-authored research paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), (*Applied Energy, 2024*), has also been selected as a **🏆 Top 1% Highly Cited Paper** and a **🔥 Top 0.1% Hot Cited Paper** by ESI.
 
 📄 Dec. 2025 – First-authored paper, [Benchmarking Knowledge and Capability of Large Language Models in Building Science Domain](https://doi.org/10.59717/ipj.energy-use.2025.100026), has been published in *Energy Use*.
 
