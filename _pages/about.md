@@ -76,16 +76,17 @@ redirect_from:
 <style>
 /* -------------------- Terminal UI Styling -------------------- */
 .llm-terminal {
-  --bg: #0d1117;
-  --fg: #d1d5da;
-  --muted: #8b949e;
-  --accent: #58a6ff;
-  border: 1px solid #30363d;
+  --bg: #ffffff;
+  --fg: #24292f;
+  --muted: #6e7781;
+  --accent: #0969da;
+
+  border: 1px solid #d0d7de;
   border-radius: 12px;
   background: var(--bg);
   color: var(--fg);
   font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
 
@@ -94,8 +95,8 @@ redirect_from:
   align-items: center;
   gap: 8px;
   padding: 10px 12px;
-  border-bottom: 1px solid #30363d;
-  background: #161b22;
+  border-bottom: 1px solid #d0d7de;
+  background: #f6f8fa;
 }
 
 .llm-terminal .dot {
@@ -133,19 +134,17 @@ redirect_from:
 }
 
 .llm-terminal__prompt {
-  border-top: 1px dashed #30363d;
+  border-top: 1px dashed #d0d7de;
   padding: 10px 16px;
   color: var(--muted);
 }
 
 .prompt-symbol {
-  color: #00ff00;
-  font-family: 'Courier New', monospace;
-  margin-right: 4px;
+  color: #1a7f37; 
 }
 
 .cursor {
-  color: white;
+  color: #24292f;
   animation: blink 1s step-start infinite;
 }
 
@@ -163,7 +162,7 @@ redirect_from:
   white-space: pre;
   overflow: hidden;
   width: 0ch;
-  border-right: 2px solid var(--fg);
+  border-right: 2px solid #57606a;
   animation:
     typing var(--dur) steps(var(--n)) forwards,
     caret var(--dur) steps(1) forwards;
