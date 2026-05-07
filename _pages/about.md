@@ -14,7 +14,7 @@ redirect_from:
     <span class="dot red"></span>
     <span class="dot yellow"></span>
     <span class="dot green"></span>
-    <span class="title">Gang AI Terminal</span>
+    <span class="title">Terminal</span>
   </div>
 
   <div class="llm-terminal__screen">
@@ -24,30 +24,23 @@ redirect_from:
       <div id="chat-messages" class="chat-messages">
 
         <div class="message assistant">
-👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in June 2026.
+Hello! I’m Gang’s personal AI assistant.  
 
-I am open to work, including AP track, PostDoc, and industry research positions.
+Gang is a fourth-year PhD candidate at The University of Utah and expects to graduate in July 2026.  
 
-Please feel free to reach out!
+He is open to academic positions, including AP-track faculty roles, Postdoctoral positions, and industry research opportunities. Please feel free to reach out!  
 
-📍 My research interests:
-- 🤖 AI & LLM for Building Science
-- ⚙️ Physics-Informed & Automated Modeling
-- 🏙 Urban Building Sustainability & Resilience
+His research interests include:
+• 🤖 AI & LLMs for Building Science and Automated Building Energy Modeling
+• ⚙️ Physics-Informed and Automated Modeling
+• 🏙 Urban Building Sustainability and Resilience  
 
-📌 I'm developing auto-building energy modeling using large language models.
-
-LLMs improve building modeling accessibility and scalability.
-
-Hello! I'm Gang AI 🤖
-
-Ask me anything about:
-• Research
-• Publications
-• EPlus-LLM
-• ABEM
-• Building Science
-• AI for Sustainability
+Ask me anything about Gang:
+• 🙎🏻‍♂️ Background
+• 📍 Experience
+• 🔬 Research
+• 📄 Publications
+• 🏟️ The EPlus-LLM Platform
         </div>
 
       </div>
@@ -234,7 +227,7 @@ Ask me anything about:
 </style>
 
 <script>
-const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY";
+const OPENAI_API_KEY = "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";
 
 const input = document.getElementById("chat-input");
 const button = document.getElementById("send-btn");
@@ -270,21 +263,20 @@ async function sendMessage() {
         },
         body: JSON.stringify({
           model: "gpt-4o",
-          temperature: 0.7,
+          temperature: 0,
           messages: [
             {
               role: "system",
               content: `
 You are Gang Jiang's personal AI assistant.
 
-You help visitors learn about:
+You help visitors learn about Gang Jiang:
 
+- Background
+- Professional Experience
 - Research
 - Publications
 - EPlus-LLM
-- ABEM
-- Building Science
-- AI for Sustainability
 - Collaborations
 - Professional Experience
 
