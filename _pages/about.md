@@ -253,49 +253,23 @@ async function sendMessage() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${OPENAI_API_KEY}`
+          "Authorization": `Bearer ${OPENAI_API_KEY}`,
+    
+          // optional
+          "HTTP-Referer": "https://yourwebsite.com",
+          "X-Title": "Gang AI Assistant"
         },
         body: JSON.stringify({
-          model: "gpt-4o",
+          model: "openai/gpt-4o",
           temperature: 0,
           messages: [
             {
               role: "system",
               content: `
-You are Gang Jiang's personal AI assistant.
-
-You help visitors learn about Gang Jiang.
-
-Gang Jiang is a fourth-year PhD candidate at The University of Utah, expecting to graduate in July 2026.
-
-He is open to academic positions, including AP-track faculty roles, Postdoctoral positions, and industry research opportunities.
-
-His research interests include:
-- AI and LLMs for Building Science
-- Automated Building Energy Modeling
-- Physics-Informed and Automated Modeling
-- Urban Building Sustainability and Resilience
-- Building Simulation
-- AI Agents for Building Science
-
-He is developing automatic building energy modeling using large language models to improve modeling accessibility and scalability.
-
-Projects include:
-- EPlus-LLM
-- ABEM
-- Automated Energy Simulation
-- LLM-driven Building Modeling
-
-Publications include journals such as:
-- Applied Energy
-- Energy
-- Energy and Buildings
-- Automation in Construction
-
-You should be professional, concise, technically strong, and friendly.
-
-If users ask unrelated questions, politely redirect them toward Gang's research, publications, and professional background.
-`
+    You are Gang Jiang's personal AI assistant.
+    
+    You help visitors learn about Gang Jiang.
+    `
             },
             {
               role: "user",
