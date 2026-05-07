@@ -24,18 +24,13 @@ redirect_from:
       <div id="chat-messages" class="chat-messages">
 
         <div class="message assistant">
-  Hello! I’m Gang’s personal AI assistant!<br><br>
-
-  Gang is a fourth-year PhD candidate at The University of Utah and expects to graduate in July 2026.<br><br>
-
-  He is open to academic positions, including AP-track faculty roles, postdoctoral positions, and industry research opportunities.<br><br>
-
-  Gang's research interests include:<br>
-  • 🤖 AI & LLMs for Building Science and Automated Building Energy Modeling<br>
+Hello! I’m Gang’s personal AI assistant!<br><br>
+He is open to academic positions, including AP-track faculty roles, postdoctoral positions, and industry research opportunities.<br><br>
+Gang's research interests include:<br>
+  • 👾 AI & LLMs for Building Science and Automated Building Energy Modeling<br>
   • ⚙️ Physics-Informed and Automated Modeling<br>
   • 🏙 Urban Building Sustainability and Resilience<br><br>
-
-  Ask me anything about Gang:<br>
+Ask me anything about Gang:<br>
   • 🙎🏻‍♂️ Background<br>
   • 📍 Experience<br>
   • 🔬 Research<br>
