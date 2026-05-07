@@ -44,7 +44,7 @@ Ask me anything about Gang:<br>
       </div>
 
       <div class="chat-input-row">
-        <span class="prompt-symbol">gang@home:~$</span>
+        <span class="prompt-symbol">🤖</span>
 
         <input
           id="chat-input"
