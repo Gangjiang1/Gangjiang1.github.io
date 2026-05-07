@@ -24,7 +24,7 @@ redirect_from:
       <div id="chat-messages" class="chat-messages">
 
         <div class="message assistant">
-Hello! I’m Gang’s personal AI assistant.  
+Hello! I’m Gang’s personal AI assistant.
 
 Gang is a fourth-year PhD candidate at The University of Utah and expects to graduate in July 2026.  
 
@@ -353,3 +353,71 @@ input.addEventListener("keydown", function(e) {
   }
 });
 </script>
+
+
+## 🖇 Open-Source Contributions
+﻿
+<div style="display: flex; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
+﻿
+<!-- Left Column -->
+<div style="flex: 1 1 300px; min-width: 280px;">
+<br>  
+<a href="https://github.com/Gangjiang1/EPlus-LLM" target="_blank"><strong>EPlus-LLMv1/v2</strong></a>:  
+LLM-driven automatic building energy modeling through natural language.  
+<br><br>  
+<a href="https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling" target="_blank"><strong>Prompting LLMs for ABEM</strong></a>:  
+A comprehensive guideline for prompt engineering of LLMs in auto-building energy modeling.
+</div>
+﻿
+<!-- Right Column -->
+<div style="flex: 0 0 420px; text-align: right;">
+  <figure style="margin: 0;">
+    <img src="/images/graphic.png" alt="Illustration of LLM for Auto-building modeling" width="420px" style="max-width: 100%; height: auto; border-radius: 10px;">
+    <figcaption style="font-size: 14px; color: #666; margin-top: 8px; padding-left: 1.5em;">
+      <em>Figure: LLM-Powered Auto-Building Modeling Workflow</em>
+    </figcaption>
+  </figure>
+</div>
+</div>
+﻿
+## 🔬 Experience
+🚀 Currently, I am collaborating with [Dr. Shandian Zhe](https://users.cs.utah.edu/~zhe/) (School of Computing, University of Utah) on NSF projects focused on improving LLMs' accuracy, computational efficiency, and robustness.
+﻿
+🧪 As part of my PhD journey, I am working with [Dr. Jianli Chen](https://scholar.google.com/citations?user=Y0ycryUAAAAJ&hl=en) on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimization, and AI Applications in Buildings.
+﻿
+🧫 During my Master’s degree, at Tianjin University, I collaborated with [Dr. Zhe Tian](https://www.researchgate.net/profile/Zhe-Tian-2) on NSF-China projects related to Building Energy System Simulation and Building Fault Detection & Diagnosis.
+﻿
+✍️ I have completed internships at [Amazon AWS](https://aws.amazon.com/), where I have gained experience in designing and operating data centers with a focus on enhancing resilience and scalability, and at [SUNAC](https://www.sunac.com.cn/en/about.aspx), where I worked in real estate management.
+﻿
+## 🎉 News
+🚀 My first-authored research paper, [Prompt Engineering to Inform Large Language Models in Automated Building Energy Modeling](https://doi.org/10.1016/j.energy.2025.134548), (*Energy, 2025*), has been recognized as a **🏆 Top 1% Highly Cited Paper** by ESI.
+﻿
+🚀 My first-authored research paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), (*Applied Energy, 2024*), has also been selected as a **🏆 Top 1% Highly Cited Paper** and a **🔥 Top 0.1% Hot Cited Paper** by ESI.
+﻿
+📄 Dec. 2025 – First-authored paper, [Benchmarking Knowledge and Capability of Large Language Models in Building Science Domain](https://doi.org/10.59717/ipj.energy-use.2025.100026), has been published in *Energy Use*.
+﻿
+📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona. I am happy to engage in discussions and make connections!
+﻿
+📄 Apr. 2025 – The paper related to the [EPlus-LLMv2 platform](https://doi.org/10.1016/j.autcon.2025.106223), has been accepted for publication in *Automation in Construction*.
+﻿
+📄 Jan. 2025 – Our review paper, [A Review of Physics-Informed Machine Learning for Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.125169), has been published in *Applied Energy*.
+﻿
+📄 Jan. 2025 – My first-authored paper, [Prompt Engineering to Inform Large Language Models in Automated Building Energy Modeling](https://doi.org/10.1016/j.energy.2025.134548), has been published in *Energy*.
+﻿
+📄 Jun. 2024 – My first-authored paper, [A Deep Learning-Based Bayesian Framework for High-Resolution Calibration of Building Energy Models](https://doi.org/10.1016/j.enbuild.2024.114755), has been published in *Energy & Buildings*.
+﻿
+📄 May. 2024 – My first-authored paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), has been published in *Applied Energy*.
+﻿
+## 🗣️ Talks
+🎤 Feb. 2026 – I’m excited to attend the *ASHRAE Winter Conference* in Las Vegas, NV! Looking forward to connecting with you there! 🌆  
+I’ll be giving two presentations:  
+(1) Large language models for automated building energy modeling (**Invited Talk**)  
+(2) Real-world applications of the EPlus-LLM Platform (**Paper Session, Poster**)
+﻿
+🎤 Oct. 2025 – **Online talk** on BuildNext: Toward Automated Building Energy Modeling with Large Language Models [Slides](/files/Gang_LLM_ABEM_Slides.pdf)
+﻿
+🎤 Aug. 2025 – I was invited to give a talk at *ASHRAE CIDCO Conference* in Denver, CO! Topic: **Automating Building Energy Modeling from Natural Language**
+﻿
+🎤 Jun. 2024 – I will be speaking about [Natural Language Auto-Modeling via Fine-tuning LLMs](https://www.proquest.com/openview/390f54178cb137415c002b116d3ffe2c/1?pq-origsite=gscholar&cbl=34619) at the *ASHRAE Annual Conference* in Indianapolis, Indiana.
+﻿
+<!-- ## 👀 ![Profile Views](https://komarev.com/ghpvc/?username=Gangjiang1&color=blue&base=1000) -->
