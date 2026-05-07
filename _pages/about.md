@@ -24,29 +24,28 @@ redirect_from:
       <div id="chat-messages" class="chat-messages">
 
         <div class="message assistant">
-Hello! I’m Gang’s personal AI assistant.
+Hello! I’m Gang’s personal AI assistant.<br><br>
 
-Gang is a fourth-year PhD candidate at The University of Utah and expects to graduate in July 2026.  
+Gang is a fourth-year PhD candidate at The University of Utah and expects to graduate in July 2026.<br><br>
 
-He is open to academic positions, including AP-track faculty roles, Postdoctoral positions, and industry research opportunities. Please feel free to reach out!  
+He is open to academic positions, including AP-track faculty roles, Postdoctoral positions, and industry research opportunities. Please feel free to reach out!<br><br>
 
-His research interests include:
-• 🤖 AI & LLMs for Building Science and Automated Building Energy Modeling
-• ⚙️ Physics-Informed and Automated Modeling
-• 🏙 Urban Building Sustainability and Resilience  
+His research interests include:<br>
+• 🤖 AI & LLMs for Building Science and Automated Building Energy Modeling<br>
+• ⚙️ Physics-Informed and Automated Modeling<br>
+• 🏙 Urban Building Sustainability and Resilience<br><br>
 
-Ask me anything about Gang:
-• 🙎🏻‍♂️ Background
-• 📍 Experience
-• 🔬 Research
-• 📄 Publications
+Ask me anything about Gang:<br>
+• 🙎🏻‍♂️ Background<br>
+• 📍 Experience<br>
+• 🔬 Research<br>
+• 📄 Publications<br>
 • 🏟️ The EPlus-LLM Platform
         </div>
 
       </div>
 
       <div class="chat-input-row">
-
         <span class="prompt-symbol">gang@home:~$</span>
 
         <input
@@ -57,7 +56,6 @@ Ask me anything about Gang:
         />
 
         <button id="send-btn">Send</button>
-
       </div>
 
     </div>
@@ -140,7 +138,7 @@ Ask me anything about Gang:
 .message {
   padding: 14px 16px;
   border-radius: 12px;
-  white-space: pre-wrap;
+  white-space: normal;
   line-height: 1.7;
   max-width: 92%;
 }
@@ -227,7 +225,7 @@ Ask me anything about Gang:
 </style>
 
 <script>
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "YOUR_NEW_OPENAI_API_KEY_HERE";
 
 const input = document.getElementById("chat-input");
 const button = document.getElementById("send-btn");
@@ -270,55 +268,37 @@ async function sendMessage() {
               content: `
 You are Gang Jiang's personal AI assistant.
 
-You help visitors learn about Gang Jiang:
+You help visitors learn about Gang Jiang.
 
-- Background
-- Professional Experience
-- Research
-- Publications
-- EPlus-LLM
-- Collaborations
-- Professional Experience
+Gang Jiang is a fourth-year PhD candidate at The University of Utah, expecting to graduate in July 2026.
 
-Background:
-
-Gang Jiang is a fourth-year PhD candidate at The University of Utah, expecting to graduate in June 2026.
-
-He is open to work, including AP track, PostDoc, and industry research positions.
+He is open to academic positions, including AP-track faculty roles, Postdoctoral positions, and industry research opportunities.
 
 His research interests include:
-
-- AI & LLM for Building Science
-- Physics-Informed & Automated Modeling
-- Urban Building Sustainability & Resilience
+- AI and LLMs for Building Science
 - Automated Building Energy Modeling
+- Physics-Informed and Automated Modeling
+- Urban Building Sustainability and Resilience
 - Building Simulation
 - AI Agents for Building Science
 
-He is developing auto-building energy modeling using large language models to improve modeling accessibility and scalability.
+He is developing automatic building energy modeling using large language models to improve modeling accessibility and scalability.
 
 Projects include:
-
 - EPlus-LLM
 - ABEM
 - Automated Energy Simulation
 - LLM-driven Building Modeling
 
 Publications include journals such as:
-
 - Applied Energy
 - Energy
-- Energy & Buildings
+- Energy and Buildings
 - Automation in Construction
 
-You should be:
+You should be professional, concise, technically strong, and friendly.
 
-- professional
-- concise
-- technically strong
-- friendly
-
-If users ask unrelated questions, politely redirect toward Gang's research, publications, and professional background.
+If users ask unrelated questions, politely redirect them toward Gang's research, publications, and professional background.
 `
             },
             {
@@ -353,7 +333,6 @@ input.addEventListener("keydown", function(e) {
   }
 });
 </script>
-
 
 ## 🖇 Open-Source Contributions
 ﻿
