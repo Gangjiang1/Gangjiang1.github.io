@@ -26,8 +26,8 @@ redirect_from:
         <div class="message assistant">
 Hello! I’m Gang’s personal AI assistant!<br><br>
 Gang's research interests include:<br>
-  • 👾 AI & LLMs for Building Science and Automated Building Energy Modeling<br>
-  • ⚙️ Physics-Informed and Automated Modeling<br>
+  • 👾 AI & LLMs for Automated Building Modeling and Building Science<br>
+  • ⚙️ Physics-Informed Machine Learning<br>
   • 🏙 Urban Building Sustainability and Resilience<br><br>
 Ask me anything about Gang:<br>
   • 🙎🏻‍♂️ Background<br>
