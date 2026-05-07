@@ -25,7 +25,6 @@ redirect_from:
 
         <div class="message assistant">
 Hello! I’m Gang’s personal AI assistant!<br><br>
-He is open to academic positions, including AP-track faculty roles, postdoctoral positions, and industry research opportunities.<br><br>
 Gang's research interests include:<br>
   • 👾 AI & LLMs for Building Science and Automated Building Energy Modeling<br>
   • ⚙️ Physics-Informed and Automated Modeling<br>
