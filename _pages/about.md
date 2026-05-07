@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "👋🏼 Hi there, I'm Gang!"
+title: "👋🏼 Hi there, I'm Gang, a PhD candidate at The University of Utah!"
 excerpt: "About me"
 author_profile: true
 redirect_from:
@@ -26,9 +26,7 @@ redirect_from:
         <div class="message assistant">
 Hello! I’m Gang’s personal AI assistant!<br><br>
 
-Gang is a fourth-year PhD candidate at The University of Utah and expects to graduate in July 2026. He is open to work!<br><br>
-
-His research interests include:<br>
+Gang's research interests include:<br>
 • 🤖 AI & LLMs for Building Science and Automated Building Energy Modeling<br>
 • ⚙️ Physics-Informed and Automated Modeling<br>
 • 🏙 Urban Building Sustainability and Resilience<br><br>
