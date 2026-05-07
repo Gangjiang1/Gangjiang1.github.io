@@ -14,7 +14,7 @@ redirect_from:
     <span class="dot red"></span>
     <span class="dot yellow"></span>
     <span class="dot green"></span>
-    <span class="title">Terminal</span>
+    <span class="title">Gang AI Assistant</span>
   </div>
 
   <div class="llm-terminal__screen">
@@ -24,18 +24,22 @@ redirect_from:
       <div id="chat-messages" class="chat-messages">
 
         <div class="message assistant">
-Hello! I’m Gang’s personal AI assistant!<br><br>
+Hello! I’m Gang’s personal AI assistant!
 
-Gang's research interests include:<br>
-• 🤖 AI & LLMs for Building Science and Automated Building Energy Modeling<br>
-• ⚙️ Physics-Informed and Automated Modeling<br>
-• 🏙 Urban Building Sustainability and Resilience<br><br>
+Gang is a fourth-year PhD candidate at The University of Utah and expects to graduate in July 2026.
 
-Ask me anything about Gang:<br>
-• 🙎🏻‍♂️ Background<br>
-• 📍 Experience<br>
-• 🔬 Research<br>
-• 📄 Publications<br>
+He is open to academic positions, including AP-track faculty roles, postdoctoral positions, and industry research opportunities.
+
+Gang's research interests include:
+• 🤖 AI & LLMs for Building Science and Automated Building Energy Modeling
+• ⚙️ Physics-Informed and Automated Modeling
+• 🏙 Urban Building Sustainability and Resilience
+
+Ask me anything about Gang:
+• 🙎🏻‍♂️ Background
+• 📍 Experience
+• 🔬 Research
+• 📄 Publications
 • 🏟️ The EPlus-LLM Platform
         </div>
 
@@ -74,6 +78,7 @@ Ask me anything about Gang:<br>
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   overflow: hidden;
   margin-top: 20px;
+  margin-bottom: 36px;
 }
 
 .llm-terminal__bar {
@@ -89,6 +94,7 @@ Ask me anything about Gang:<br>
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .red {
@@ -134,7 +140,9 @@ Ask me anything about Gang:<br>
 .message {
   padding: 14px 16px;
   border-radius: 12px;
-  white-space: normal;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
   line-height: 1.7;
   max-width: 92%;
 }
@@ -170,12 +178,17 @@ Ask me anything about Gang:<br>
 
 #chat-input {
   flex: 1;
+  min-width: 0;
   border: none;
   outline: none;
   background: transparent;
   font-family: inherit;
   font-size: 14px;
   color: #24292f;
+}
+
+#chat-input::placeholder {
+  color: #8c959f;
 }
 
 #send-btn {
@@ -192,6 +205,11 @@ Ask me anything about Gang:<br>
   background: #f3f4f6;
 }
 
+#send-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .chat-messages::-webkit-scrollbar {
   width: 8px;
 }
@@ -199,6 +217,46 @@ Ask me anything about Gang:<br>
 .chat-messages::-webkit-scrollbar-thumb {
   background: #d0d7de;
   border-radius: 8px;
+}
+
+.home-section {
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.home-section p {
+  line-height: 1.8;
+}
+
+.contribution-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contribution-text {
+  flex: 1 1 300px;
+  min-width: 280px;
+  line-height: 1.8;
+}
+
+.contribution-figure {
+  flex: 0 0 420px;
+  text-align: right;
+}
+
+.contribution-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contribution-figure figcaption {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {
@@ -217,11 +275,16 @@ Ask me anything about Gang:<br>
   #send-btn {
     width: 100%;
   }
+
+  .contribution-figure {
+    flex: 1 1 100%;
+    text-align: center;
+  }
 }
 </style>
 
 <script>
-const OPENAI_API_KEY = "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";
+const OPENROUTER_API_KEY = "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";
 
 const input = document.getElementById("chat-input");
 const button = document.getElementById("send-btn");
@@ -236,6 +299,22 @@ function appendMessage(role, text) {
   return div;
 }
 
+function getConversationHistory() {
+  const messageDivs = messages.querySelectorAll(".message");
+  const history = [];
+
+  messageDivs.forEach(div => {
+    const role = div.classList.contains("user") ? "user" : "assistant";
+    const content = div.textContent.trim();
+
+    if (content && content !== "Thinking...") {
+      history.push({ role, content });
+    }
+  });
+
+  return history.slice(-8);
+}
+
 async function sendMessage() {
   const text = input.value.trim();
 
@@ -243,34 +322,79 @@ async function sendMessage() {
 
   appendMessage("user", text);
   input.value = "";
+  input.focus();
 
   const aiDiv = appendMessage("assistant", "Thinking...");
+  button.disabled = true;
 
   try {
+    const conversationHistory = getConversationHistory();
+
     const response = await fetch(
       "https://openrouter.ai/api/v1/chat/completions",
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${OPENAI_API_KEY}`,
-    
-          // optional
+          "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
           "HTTP-Referer": "https://yourwebsite.com",
           "X-Title": "Gang AI Assistant"
         },
         body: JSON.stringify({
-          model: "openai/gpt-4o",
-          temperature: 0,
+          model: "openai/gpt-4o-mini",
+          temperature: 0.2,
           messages: [
             {
               role: "system",
               content: `
-    You are Gang Jiang's personal AI assistant.
-    
-    You help visitors learn about Gang Jiang.
-    `
+You are Gang Jiang's personal AI assistant on his academic website.
+
+Your job is to help visitors learn about Gang Jiang in a professional, concise, and friendly way.
+
+Basic profile:
+Gang Jiang is a fourth-year PhD candidate at The University of Utah. He expects to graduate in July 2026.
+He is open to academic positions, including AP-track faculty roles, postdoctoral positions, and industry research opportunities.
+
+Research interests:
+1. AI and large language models for building science.
+2. Automated Building Energy Modeling.
+3. Physics-informed and automated modeling.
+4. Urban building sustainability and resilience.
+
+Research and platforms:
+Gang develops EPlus-LLM and EPlus-LLMv2, large language model-based platforms for automated building energy modeling.
+His work focuses on making building energy modeling more accessible, scalable, and automated through LLMs, multimodal reasoning, prompt engineering, fine-tuning, and agentic AI systems.
+
+Open-source projects:
+1. EPlus-LLMv1/v2: LLM-driven automatic building energy modeling through natural language.
+2. Prompting LLMs for ABEM: A guideline for prompt engineering of LLMs in automated building energy modeling.
+
+Selected publications:
+1. EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling, Applied Energy, 2024.
+2. Prompt Engineering to Inform Large Language Models in Automated Building Energy Modeling, Energy, 2025.
+3. A Deep Learning-Based Bayesian Framework for High-Resolution Calibration of Building Energy Models, Energy & Buildings, 2024.
+4. A Review of Physics-Informed Machine Learning for Building Energy Modeling, Applied Energy, 2025.
+5. EPlus-LLMv2 platform paper, Automation in Construction, 2025.
+6. Benchmarking Knowledge and Capability of Large Language Models in Building Science Domain, Energy Use, 2025.
+
+Experience:
+Gang has collaborated with Dr. Shandian Zhe at the School of Computing, University of Utah, on NSF projects related to LLM accuracy, computational efficiency, and robustness.
+He works with Dr. Jianli Chen on NSF-funded projects related to Building Energy Modeling, Calibration, Optimization, and AI applications in buildings.
+During his Master's degree at Tianjin University, he collaborated with Dr. Zhe Tian on NSF-China projects related to Building Energy System Simulation and Fault Detection & Diagnosis.
+He also completed internships at Amazon AWS and SUNAC.
+
+Talks:
+Gang has given or will give talks at ASHRAE conferences and BuildNext on automated building energy modeling with large language models.
+
+Answering style:
+Use clear and concise answers.
+If visitors ask about Gang's research, explain it in an accessible way.
+If visitors ask about publications, summarize the most relevant papers.
+If visitors ask about job opportunities or collaboration, encourage them to contact Gang.
+Do not make up information that is not provided.
+              `
             },
+            ...conversationHistory,
             {
               role: "user",
               content: text
@@ -282,16 +406,30 @@ async function sendMessage() {
 
     const data = await response.json();
 
-    if (data.error) {
-      aiDiv.textContent = "OpenAI API Error: " + data.error.message;
+    if (!response.ok) {
+      aiDiv.textContent = "API Error: " + (data.error?.message || "Request failed.");
       return;
     }
 
-    aiDiv.textContent = data.choices[0].message.content;
+    if (data.error) {
+      aiDiv.textContent = "API Error: " + data.error.message;
+      return;
+    }
+
+    const reply = data.choices?.[0]?.message?.content;
+
+    if (!reply) {
+      aiDiv.textContent = "Sorry, I did not receive a valid response.";
+      return;
+    }
+
+    aiDiv.textContent = reply;
 
   } catch (error) {
     console.error(error);
-    aiDiv.textContent = "Error connecting to GPT-4o.";
+    aiDiv.textContent = "Error connecting to the AI assistant. Please try again later.";
+  } finally {
+    button.disabled = false;
   }
 }
 
@@ -304,12 +442,13 @@ input.addEventListener("keydown", function(e) {
 });
 </script>
 
+<div class="home-section">
+
 <h2>🖇 Open-Source Contributions</h2>
 
-<div style="display:flex; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-top:20px;">
+<div class="contribution-wrapper">
 
-  <!-- Left Column -->
-  <div style="flex:1 1 300px; min-width:280px; line-height:1.8;">
+  <div class="contribution-text">
 
     <a href="https://github.com/Gangjiang1/EPlus-LLM" target="_blank">
       <strong>EPlus-LLMv1/v2</strong>
@@ -325,19 +464,17 @@ input.addEventListener("keydown", function(e) {
 
   </div>
 
-  <!-- Right Column -->
-  <div style="flex:0 0 420px; text-align:right;">
+  <div class="contribution-figure">
 
     <figure style="margin:0;">
 
       <img
         src="/images/graphic.png"
-        alt="Illustration of LLM for Auto-building modeling."
+        alt="Illustration of LLM for automated building modeling."
         width="420"
-        style="max-width:100%; height:auto; border-radius:10px;"
       >
 
-      <figcaption style="font-size:14px; color:#666; margin-top:8px;">
+      <figcaption>
         <em>Figure: LLM-Powered Auto-Building Modeling Workflow</em>
       </figcaption>
 
@@ -346,13 +483,17 @@ input.addEventListener("keydown", function(e) {
   </div>
 
 </div>
-﻿
+
+</div>
+
+<div class="home-section">
+
 <h2>🔬 Experience</h2>
 
 <p>
 🚀 Currently, I am collaborating with 
 <a href="https://users.cs.utah.edu/~zhe/" target="_blank">Dr. Shandian Zhe</a>
-(School of Computing, University of Utah) on NSF projects focused on improving LLMs' accuracy, computational efficiency, and robustness.
+from the School of Computing at the University of Utah on NSF projects focused on improving LLMs' accuracy, computational efficiency, and robustness.
 </p>
 
 <p>
@@ -364,16 +505,20 @@ on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimiz
 <p>
 🧫 During my Master’s degree at Tianjin University, I collaborated with
 <a href="https://www.researchgate.net/profile/Zhe-Tian-2" target="_blank">Dr. Zhe Tian</a>
-on NSF-China projects related to Building Energy System Simulation and Building Fault Detection & Diagnosis.
+on NSF-China projects related to Building Energy System Simulation and Building Fault Detection and Diagnosis.
 </p>
 
 <p>
 ✍️ I completed internships at
 <a href="https://aws.amazon.com/" target="_blank">Amazon AWS</a>,
-where I gained experience in designing and operating data centers with a focus on enhancing resilience and scalability, and at
+where I gained experience in designing and operating data centers with a focus on resilience and scalability, and at
 <a href="https://www.sunac.com.cn/en/about.aspx" target="_blank">SUNAC</a>,
 where I worked in real estate management.
 </p>
+
+</div>
+
+<div class="home-section">
 
 <h2>🎉 News</h2>
 
@@ -446,6 +591,10 @@ EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Buildin
 has been published in <em>Applied Energy</em>.
 </p>
 
+</div>
+
+<div class="home-section">
+
 <h2>🗣️ Talks</h2>
 
 <p>
@@ -473,3 +622,5 @@ Natural Language Auto-Modeling via Fine-tuning LLMs
 </a>
 at the <em>ASHRAE Annual Conference</em> in Indianapolis, Indiana.
 </p>
+
+</div>
