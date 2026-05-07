@@ -221,7 +221,7 @@ Ask me anything about Gang:<br>
 </style>
 
 <script>
-const OPENAI_API_KEY = "YOUR_NEW_OPENAI_API_KEY_HERE";
+const OPENAI_API_KEY = "AIzaSyDDM5Wqx9ageAgd_p9-HIST4o-VlEAbC8E";
 
 const input = document.getElementById("chat-input");
 const button = document.getElementById("send-btn");
