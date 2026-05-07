@@ -47,7 +47,7 @@ Ask me anything about Gang:<br>
         <input
           id="chat-input"
           type="text"
-          placeholder="Ask my AI anything..."
+          placeholder="Ask anything..."
           autocomplete="off"
         />
 
@@ -221,7 +221,7 @@ Ask me anything about Gang:<br>
 </style>
 
 <script>
-const OPENAI_API_KEY = "AIzaSyDDM5Wqx9ageAgd_p9-HIST4o-VlEAbC8E";
+const OPENAI_API_KEY = "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";
 
 const input = document.getElementById("chat-input");
 const button = document.getElementById("send-btn");
@@ -248,7 +248,7 @@ async function sendMessage() {
 
   try {
     const response = await fetch(
-      "https://api.openai.com/v1/chat/completions",
+      "https://openrouter.ai/api/v1/chat/completions",
       {
         method: "POST",
         headers: {
