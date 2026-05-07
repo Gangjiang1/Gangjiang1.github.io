@@ -9,253 +9,613 @@ redirect_from:
 ---
 
 <div class="llm-terminal" role="region" aria-label="LLM terminal introduction">
+
+  <!-- Terminal Top Bar -->
   <div class="llm-terminal__bar">
-    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-    <span class="title">Terminal</span>
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+    <span class="title">Gang AI Terminal</span>
   </div>
 
+  <!-- Intro Screen -->
   <div class="llm-terminal__screen">
-    <!-- line 2: +1s -->
-    <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:1.56s;">
+
+    <div class="type-line"
+         style="--n:94; --dur:calc(var(--n)*0.035s); --delay:0.6s;">
       👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in
     </div>
 
-    <!-- line 3: normal -->
-    <div class="type-line" style="--n:12; --dur:calc(var(--n)*0.035s); --delay:4.85s;">
+    <div class="type-line"
+         style="--n:12; --dur:calc(var(--n)*0.035s); --delay:4.2s;">
       June 2026.
     </div>
 
-    <!-- line 4: +1s -->
-    <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:5.23s;">
-      I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
+    <div class="type-line"
+         style="--n:81; --dur:calc(var(--n)*0.035s); --delay:5.0s;">
+      I am open to work, including AP track, PostDoc, and industry research positions.
     </div>
 
-    <!-- line 5: normal -->
-    <div class="type-line" style="--n:31; --dur:calc(var(--n)*0.035s); --delay:8.07s;">
+    <div class="type-line"
+         style="--n:31; --dur:calc(var(--n)*0.035s); --delay:8.0s;">
       Please feel free to reach out!
     </div>
 
-    <!-- line 6: +1s -->
-    <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:9.0s;">
+    <div class="type-line"
+         style="--n:26; --dur:calc(var(--n)*0.035s); --delay:9.0s;">
       📍 My research interests:
     </div>
 
-    <!-- line 7: +1s -->
-    <div class="type-line" style="--n:40; --dur:calc(var(--n)*0.035s); --delay:10.0s;">
-      - 🤖 <strong>AI & LLM for Building Science</strong>
+    <div class="type-line"
+         style="--n:40; --dur:calc(var(--n)*0.035s); --delay:10.0s;">
+      - 🤖 AI & LLM for Building Science
     </div>
 
-    <!-- line 8: normal -->
-    <div class="type-line" style="--n:45; --dur:calc(var(--n)*0.035s); --delay:11.5s;">
-      - ⚙️ <strong>Physics-Informed & Automated Modeling</strong>
+    <div class="type-line"
+         style="--n:45; --dur:calc(var(--n)*0.035s); --delay:11.5s;">
+      - ⚙️ Physics-Informed & Automated Modeling
     </div>
 
-    <!-- line 9: normal -->
-    <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:13.39s;">
-      - 🏙 <strong>(Urban) Building Sustainability & Resilience</strong>
+    <div class="type-line"
+         style="--n:58; --dur:calc(var(--n)*0.035s); --delay:13.3s;">
+      - 🏙 Urban Building Sustainability & Resilience
     </div>
 
-    <!-- line 10: +1s -->
-    <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:15.16s;">
-      📌 I'm developing <strong>auto-building energy modeling (ABEM) using large language models</strong>
+    <div class="type-line"
+         style="--n:88; --dur:calc(var(--n)*0.035s); --delay:15.0s;">
+      📌 I'm developing auto-building energy modeling using large language models.
     </div>
 
-    <!-- line 11: normal -->
-    <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:18.24s;">
-      <strong>(LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
+    <div class="type-line"
+         style="--n:71; --dur:calc(var(--n)*0.035s); --delay:18.0s;">
+      LLMs improve building modeling accessibility and scalability.
     </div>
 
   </div>
 
-  <div class="llm-terminal__prompt">
-    <span class="prompt-symbol">gang@home:~$</span>
-    <span class="cursor" aria-hidden="true">█</span>
+  <!-- Chat Window -->
+  <div class="chat-container">
+
+    <div id="chat-messages" class="chat-messages">
+
+      <div class="message assistant">
+Hello! I'm Gang AI 🤖
+
+Ask me anything about:
+• Research
+• Publications
+• EPlus-LLM
+• ABEM
+• Building Science
+• AI for Sustainability
+      </div>
+
+    </div>
+
+    <div class="chat-input-row">
+
+      <span class="prompt-symbol">
+gang@home:~$
+      </span>
+
+      <input
+        id="chat-input"
+        type="text"
+        placeholder="Ask my AI anything..."
+        autocomplete="off"
+      />
+
+      <button id="send-btn">
+Send
+      </button>
+
+    </div>
+
   </div>
+
 </div>
 
 <style>
-/* -------------------- Terminal UI Styling -------------------- */
+
+/* -------------------- Terminal UI -------------------- */
+
 .llm-terminal {
+
   --bg: #ffffff;
   --fg: #24292f;
   --muted: #6e7781;
-  --accent: #0969da;
 
   border: 1px solid #d0d7de;
-  border-radius: 12px;
+  border-radius: 14px;
   background: var(--bg);
   color: var(--fg);
-  font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+
+  font: 14px/1.7
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
   overflow: hidden;
+
+  margin-top: 20px;
 }
 
+/* -------------------- Top Bar -------------------- */
+
 .llm-terminal__bar {
+
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
-  border-bottom: 1px solid #d0d7de;
+
+  padding: 12px 14px;
+
   background: #f6f8fa;
+
+  border-bottom: 1px solid #d0d7de;
 }
 
-.llm-terminal .dot {
+.dot {
+
   width: 10px;
   height: 10px;
+
   border-radius: 50%;
-  display: inline-block;
 }
 
-.llm-terminal .dot.red {
+.red {
   background: #ff5f56;
 }
-.llm-terminal .dot.yellow {
+
+.yellow {
   background: #ffbd2e;
 }
-.llm-terminal .dot.green {
+
+.green {
   background: #27c93f;
 }
 
-.llm-terminal .title {
-  color: var(--muted);
-  margin-left: 6px;
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.title {
+
+  margin-left: 8px;
+
+  color: #6e7781;
+
+  font-weight: 600;
 }
+
+/* -------------------- Intro Screen -------------------- */
 
 .llm-terminal__screen {
-  padding: 14px 16px;
-  min-height: 260px;
-  white-space: pre-wrap;
-  word-break: break-word;
-  margin: 0;
+
+  padding: 18px;
+
+  border-bottom: 1px dashed #d0d7de;
+
+  min-height: 320px;
 }
 
-.llm-terminal__prompt {
-  border-top: 1px dashed #d0d7de;
-  padding: 10px 16px;
-  color: var(--muted);
-}
+/* -------------------- Typewriter -------------------- */
 
-.prompt-symbol {
-  color: #1a7f37; 
-}
-
-.cursor {
-  color: #24292f;
-  animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-/* -------------------- Typewriter Effect -------------------- */
 .type-line {
+
   position: relative;
+
   display: block;
-  font-variant-ligatures: none;
-  white-space: pre;
+
+  white-space: pre-wrap;
+
   overflow: hidden;
+
   width: 0ch;
+
   border-right: 2px solid #57606a;
+
   animation:
     typing var(--dur) steps(var(--n)) forwards,
     caret var(--dur) steps(1) forwards;
-  animation-delay: var(--delay), var(--delay);
-}
 
-@keyframes caret {
-  0%, 49% {
-    border-right-color: var(--fg);
-  }
-  50%, 100% {
-    border-right-color: transparent;
-  }
+  animation-delay:
+    var(--delay),
+    var(--delay);
 }
 
 @keyframes typing {
+
   from {
     width: 0ch;
   }
+
   to {
     width: calc(var(--n) * 1ch);
   }
 }
 
-/* Global dark mode hint */
-:root {
-  color-scheme: dark;
+@keyframes caret {
+
+  0%, 49% {
+    border-right-color: #24292f;
+  }
+
+  50%, 100% {
+    border-right-color: transparent;
+  }
 }
+
+/* -------------------- Chat Container -------------------- */
+
+.chat-container {
+
+  background: #ffffff;
+}
+
+/* -------------------- Chat Messages -------------------- */
+
+.chat-messages {
+
+  height: 420px;
+
+  overflow-y: auto;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+  background: #fcfcfc;
+}
+
+/* -------------------- Messages -------------------- */
+
+.message {
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  white-space: pre-wrap;
+
+  line-height: 1.7;
+
+  max-width: 90%;
+}
+
+.message.user {
+
+  align-self: flex-end;
+
+  background: #eaf2ff;
+
+  color: #0a3069;
+
+  border: 1px solid #c6dbff;
+}
+
+.message.assistant {
+
+  align-self: flex-start;
+
+  background: #f6f8fa;
+
+  color: #24292f;
+
+  border: 1px solid #d0d7de;
+}
+
+/* -------------------- Input Row -------------------- */
+
+.chat-input-row {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  border-top: 1px solid #d0d7de;
+
+  background: #f6f8fa;
+}
+
+.prompt-symbol {
+
+  color: #1a7f37;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* -------------------- Input -------------------- */
+
+#chat-input {
+
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  color: #24292f;
+}
+
+/* -------------------- Button -------------------- */
+
+#send-btn {
+
+  border: 1px solid #d0d7de;
+
+  background: white;
+
+  border-radius: 8px;
+
+  padding: 8px 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  font-family: inherit;
+}
+
+#send-btn:hover {
+
+  background: #f3f4f6;
+}
+
+/* -------------------- Scrollbar -------------------- */
+
+.chat-messages::-webkit-scrollbar {
+
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+
+  background: #d0d7de;
+
+  border-radius: 8px;
+}
+
+/* -------------------- Mobile -------------------- */
+
+@media (max-width: 768px) {
+
+  .chat-messages {
+
+    height: 360px;
+  }
+
+  .message {
+
+    max-width: 100%;
+  }
+
+  .chat-input-row {
+
+    flex-wrap: wrap;
+  }
+
+  #send-btn {
+
+    width: 100%;
+  }
+}
+
 </style>
 
-## 🖇 Open-Source Contributions
+<script>
 
-<div style="display: flex; align-items: flex-start; gap: 24px; flex-wrap: wrap;">
+/* =========================================================
+   IMPORTANT:
+   Replace with your own OpenAI API Key
+========================================================= */
 
-<!-- Left Column -->
-<div style="flex: 1 1 300px; min-width: 280px;">
-<br>  
-<a href="https://github.com/Gangjiang1/EPlus-LLM" target="_blank"><strong>EPlus-LLMv1/v2</strong></a>:  
-LLM-driven automatic building energy modeling through natural language.  
-<br><br>  
-<a href="https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling" target="_blank"><strong>Prompting LLMs for ABEM</strong></a>:  
-A comprehensive guideline for prompt engineering of LLMs in auto-building energy modeling.
-</div>
+const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY";
 
-<!-- Right Column -->
-<div style="flex: 0 0 420px; text-align: right;">
-  <figure style="margin: 0;">
-    <img src="/images/graphic.png" alt="Illustration of LLM for Auto-building modeling" width="420px" style="max-width: 100%; height: auto; border-radius: 10px;">
-    <figcaption style="font-size: 14px; color: #666; margin-top: 8px; padding-left: 1.5em;">
-      <em>Figure: LLM-Powered Auto-Building Modeling Workflow</em>
-    </figcaption>
-  </figure>
-</div>
-</div>
+/* =========================================================
+   DOM
+========================================================= */
 
-## 🔬 Experience
-🚀 Currently, I am collaborating with [Dr. Shandian Zhe](https://users.cs.utah.edu/~zhe/) (School of Computing, University of Utah) on NSF projects focused on improving LLMs' accuracy, computational efficiency, and robustness.
+const input =
+  document.getElementById("chat-input");
 
-🧪 As part of my PhD journey, I am working with [Dr. Jianli Chen](https://scholar.google.com/citations?user=Y0ycryUAAAAJ&hl=en) on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimization, and AI Applications in Buildings.
+const button =
+  document.getElementById("send-btn");
 
-🧫 During my Master’s degree, at Tianjin University, I collaborated with [Dr. Zhe Tian](https://www.researchgate.net/profile/Zhe-Tian-2) on NSF-China projects related to Building Energy System Simulation and Building Fault Detection & Diagnosis.
+const messages =
+  document.getElementById("chat-messages");
 
-✍️ I have completed internships at [Amazon AWS](https://aws.amazon.com/), where I have gained experience in designing and operating data centers with a focus on enhancing resilience and scalability, and at [SUNAC](https://www.sunac.com.cn/en/about.aspx), where I worked in real estate management.
+/* =========================================================
+   Add Message
+========================================================= */
 
-## 🎉 News
-🚀 My first-authored research paper, [Prompt Engineering to Inform Large Language Models in Automated Building Energy Modeling](https://doi.org/10.1016/j.energy.2025.134548), (*Energy, 2025*), has been recognized as a **🏆 Top 1% Highly Cited Paper** by ESI.
+function appendMessage(role, text) {
 
-🚀 My first-authored research paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), (*Applied Energy, 2024*), has also been selected as a **🏆 Top 1% Highly Cited Paper** and a **🔥 Top 0.1% Hot Cited Paper** by ESI.
+  const div = document.createElement("div");
 
-📄 Dec. 2025 – First-authored paper, [Benchmarking Knowledge and Capability of Large Language Models in Building Science Domain](https://doi.org/10.59717/ipj.energy-use.2025.100026), has been published in *Energy Use*.
+  div.className = `message ${role}`;
 
-📢 Jun. 2025 – I will be attending the *ASHRAE Annual Conference* in Phoenix, Arizona. I am happy to engage in discussions and make connections!
+  div.textContent = text;
 
-📄 Apr. 2025 – The paper related to the [EPlus-LLMv2 platform](https://doi.org/10.1016/j.autcon.2025.106223), has been accepted for publication in *Automation in Construction*.
+  messages.appendChild(div);
 
-📄 Jan. 2025 – Our review paper, [A Review of Physics-Informed Machine Learning for Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.125169), has been published in *Applied Energy*.
+  messages.scrollTop =
+    messages.scrollHeight;
 
-📄 Jan. 2025 – My first-authored paper, [Prompt Engineering to Inform Large Language Models in Automated Building Energy Modeling](https://doi.org/10.1016/j.energy.2025.134548), has been published in *Energy*.
+  return div;
+}
 
-📄 Jun. 2024 – My first-authored paper, [A Deep Learning-Based Bayesian Framework for High-Resolution Calibration of Building Energy Models](https://doi.org/10.1016/j.enbuild.2024.114755), has been published in *Energy & Buildings*.
+/* =========================================================
+   GPT Request
+========================================================= */
 
-📄 May. 2024 – My first-authored paper, [EPlus-LLM: A Large Language Model-Based Computing Platform for Automated Building Energy Modeling](https://doi.org/10.1016/j.apenergy.2024.123431), has been published in *Applied Energy*.
+async function sendMessage() {
 
-## 🗣️ Talks
-🎤 Feb. 2026 – I’m excited to attend the *ASHRAE Winter Conference* in Las Vegas, NV! Looking forward to connecting with you there! 🌆  
-I’ll be giving two presentations:  
-(1) Large language models for automated building energy modeling (**Invited Talk**)  
-(2) Real-world applications of the EPlus-LLM Platform (**Paper Session, Poster**)
+  const text = input.value.trim();
 
-🎤 Oct. 2025 – **Online talk** on BuildNext: Toward Automated Building Energy Modeling with Large Language Models [Slides](/files/Gang_LLM_ABEM_Slides.pdf)
+  if (!text) return;
 
-🎤 Aug. 2025 – I was invited to give a talk at *ASHRAE CIDCO Conference* in Denver, CO! Topic: **Automating Building Energy Modeling from Natural Language**
+  appendMessage(
+    "user",
+    text
+  );
 
-🎤 Jun. 2024 – I will be speaking about [Natural Language Auto-Modeling via Fine-tuning LLMs](https://www.proquest.com/openview/390f54178cb137415c002b116d3ffe2c/1?pq-origsite=gscholar&cbl=34619) at the *ASHRAE Annual Conference* in Indianapolis, Indiana.
+  input.value = "";
 
-<!-- ## 👀 ![Profile Views](https://komarev.com/ghpvc/?username=Gangjiang1&color=blue&base=1000) -->
+  const aiDiv = appendMessage(
+    "assistant",
+    "Thinking..."
+  );
+
+  try {
+
+    const response = await fetch(
+      "https://api.openai.com/v1/chat/completions",
+      {
+
+        method: "POST",
+
+        headers: {
+
+          "Content-Type":
+            "application/json",
+
+          "Authorization":
+            `Bearer ${OPENAI_API_KEY}`
+        },
+
+        body: JSON.stringify({
+
+          model: "gpt-4o",
+
+          temperature: 0.7,
+
+          messages: [
+
+            {
+              role: "system",
+
+              content: `
+You are Gang Jiang's personal AI assistant.
+
+You help visitors learn about:
+
+- Gang's research
+- Publications
+- EPlus-LLM
+- Automated Building Energy Modeling
+- Building Science
+- AI for Sustainability
+- Urban Sustainability
+- Collaborations
+- Research Experience
+- Professional Background
+
+Background:
+
+Gang Jiang is a PhD candidate
+at the University of Utah.
+
+Research interests include:
+
+- AI & LLM for Building Science
+- Automated Building Energy Modeling
+- Physics-informed AI
+- Urban Sustainability
+- Building Simulation
+- Energy Modeling
+- AI Agents
+
+Projects include:
+
+- EPlus-LLM
+- ABEM
+- Automated Energy Simulation
+- LLM-driven Modeling
+
+Published in journals such as:
+
+- Applied Energy
+- Energy
+- Energy & Buildings
+- Automation in Construction
+
+You should be:
+
+- professional
+- concise
+- friendly
+- technically strong
+
+If users ask unrelated questions,
+politely redirect the conversation
+toward Gang's expertise and work.
+`
+            },
+
+            {
+              role: "user",
+              content: text
+            }
+
+          ]
+
+        })
+
+      }
+    );
+
+    const data =
+      await response.json();
+
+    aiDiv.textContent =
+      data.choices[0].message.content;
+
+  } catch (error) {
+
+    console.error(error);
+
+    aiDiv.textContent =
+      "Error connecting to GPT-4o.";
+  }
+}
+
+/* =========================================================
+   Events
+========================================================= */
+
+button.addEventListener(
+  "click",
+  sendMessage
+);
+
+input.addEventListener(
+  "keydown",
+  (e) => {
+
+    if (e.key === "Enter") {
+
+      sendMessage();
+    }
+  }
+);
+
+</script>
