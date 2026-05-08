@@ -1,5 +1,3 @@
-old version github page
-
 ---
 permalink: /
 title: "👋🏼 Hi there, I'm Gang!"
