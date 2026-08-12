@@ -17,50 +17,35 @@ redirect_from:
   <div class="llm-terminal__screen">
     <!-- line 2: +1s -->
     <div class="type-line" style="--n:94; --dur:calc(var(--n)*0.035s); --delay:1.56s;">
-      👨🏻‍💻 I'm a fourth-year PhD candidate at The University of Utah, expecting to graduate in
+      👨🏻‍💻 I'm a PostDoc Researcher at Texas A&M University.
     </div>
 
-    <!-- line 3: normal -->
-    <div class="type-line" style="--n:12; --dur:calc(var(--n)*0.035s); --delay:4.85s;">
-      June 2026.
-    </div>
-
-    <!-- line 4: +1s -->
-    <div class="type-line" style="--n:81; --dur:calc(var(--n)*0.035s); --delay:5.23s;">
-      I am open to work, including <strong>AP track, PostDoc, and industry research positions</strong>.
-    </div>
-
-    <!-- line 5: normal -->
-    <div class="type-line" style="--n:31; --dur:calc(var(--n)*0.035s); --delay:8.07s;">
-      Please feel free to reach out!
-    </div>
-
-    <!-- line 6: +1s -->
+    <!-- line 3: +1s -->
     <div class="type-line" style="--n:26; --dur:calc(var(--n)*0.035s); --delay:9.0s;">
       📍 My research interests:
     </div>
 
-    <!-- line 7: +1s -->
+    <!-- line 4: +1s -->
     <div class="type-line" style="--n:40; --dur:calc(var(--n)*0.035s); --delay:10.0s;">
       - 🤖 <strong>AI & LLM for Building Science</strong>
     </div>
 
-    <!-- line 8: normal -->
+    <!-- line 5: normal -->
     <div class="type-line" style="--n:45; --dur:calc(var(--n)*0.035s); --delay:11.5s;">
       - ⚙️ <strong>Physics-Informed & Automated Modeling</strong>
     </div>
 
-    <!-- line 9: normal -->
+    <!-- line 6: normal -->
     <div class="type-line" style="--n:58; --dur:calc(var(--n)*0.035s); --delay:13.39s;">
       - 🏙 <strong>(Urban) Building Sustainability & Resilience</strong>
     </div>
 
-    <!-- line 10: +1s -->
+    <!-- line 7: +1s -->
     <div class="type-line" style="--n:88; --dur:calc(var(--n)*0.035s); --delay:15.16s;">
       📌 I'm developing <strong>auto-building energy modeling (ABEM) using large language models</strong>
     </div>
 
-    <!-- line 11: normal -->
+    <!-- line 8: normal -->
     <div class="type-line" style="--n:71; --dur:calc(var(--n)*0.035s); --delay:18.24s;">
       <strong>(LLMs)</strong> to improve modeling <strong>accessibility & scalability</strong>.
     </div>
