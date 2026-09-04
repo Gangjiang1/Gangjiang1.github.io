@@ -204,7 +204,7 @@ A comprehensive guideline for prompt engineering of LLMs in auto-building energy
 </div>
 
 ## 🔬 Experience
-🚀 Currently, I am Collaborating with [Dr. Zheng O'Neill](https://engineering.tamu.edu/mechanical/profiles/oneill-zheng.html) to advance the frontiers of AI in buildings.
+🚀 Currently, I am collaborating with [Dr. Zheng O'Neill](https://engineering.tamu.edu/mechanical/profiles/oneill-zheng.html) to advance the frontiers of AI in buildings.
 
 🧪 During my PhD journey at the University of Utah, I worked with [Dr. Jianli Chen](https://scholar.google.com/citations?user=Y0ycryUAAAAJ&hl=en) on NSF-funded projects focused on Building Energy Modeling, Calibration, Optimization, and AI Applications in Buildings. I also worked with [Dr. Shandian Zhe](https://users.cs.utah.edu/~zhe/) (School of Computing, University of Utah) on NSF projects focused on improving LLMs' accuracy, computational efficiency, and robustness.
 
