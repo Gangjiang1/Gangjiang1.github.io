@@ -208,10 +208,18 @@ A comprehensive guideline for prompt engineering of LLMs in automated building e
 
 
 <!-- Right Column -->
-<div style="flex: 0 0 420px; text-align: right;">
-<!-- Figure 1 -->
 
-  <figure style="margin: 0 0 24px 0; text-align: center;">
+<div style="
+  flex: 0 0 420px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+">
+
+<!-- Figure 1 -->
+  <figure style="margin: 0 0 48px 0; text-align: center;">
     <img 
       src="/images/graphic.png" 
       alt="LLM-powered automated building modeling workflow"
@@ -228,7 +236,7 @@ A comprehensive guideline for prompt engineering of LLMs in automated building e
     </figcaption>
   </figure>
   
-  <figure style="margin: 0 0 24px 0; text-align: center;">
+  <figure style="margin: 0 0 48px 0; text-align: center;">
     <img 
       src="/images/scenarios.png" 
       alt="Complex building energy modeling scenarios"
@@ -241,14 +249,14 @@ A comprehensive guideline for prompt engineering of LLMs in automated building e
         border-radius: 10px;
       ">
     <figcaption style="font-size: 13px; color: #666; margin-top: 8px; line-height: 1.4;">
-      <em>Figure: Complex Building Modeling Scenarios</em>
+      <em>Figure: Supported Nearly All Building Modeling Scenarios</em>
     </figcaption>
   </figure>
   
   <figure style="margin: 0; text-align: center;">
     <img 
       src="/images/multimodal.png" 
-      alt="Multimodal automated building energy modeling"
+      alt="Agentic Multimodal Automated Building Energy Modeling Pipeline"
       style="
         width: 100%;
         max-width: 400px;
@@ -258,12 +266,11 @@ A comprehensive guideline for prompt engineering of LLMs in automated building e
         border-radius: 10px;
       ">
     <figcaption style="font-size: 13px; color: #666; margin-top: 8px; line-height: 1.4;">
-      <em>Figure: Multimodal Automated Building Energy Modeling</em>
+      <em>Figure: Agentic Multimodal Automated Building Energy Modeling Pipeline</em>
     </figcaption>
   </figure>
-</div>
-</div>
 
+</div>
 
 ## 🔬 Experience
 🚀 Currently, I am collaborating with [Dr. Zheng O'Neill](https://engineering.tamu.edu/mechanical/profiles/oneill-zheng.html) to advance the frontiers of AI in buildings.
