@@ -271,6 +271,7 @@ A comprehensive guideline for prompt engineering of LLMs in automated building e
   </figure>
 
 </div>
+</div>
 
 ## 🔬 Experience
 🚀 Currently, I am collaborating with [Dr. Zheng O'Neill](https://engineering.tamu.edu/mechanical/profiles/oneill-zheng.html) to advance the frontiers of AI in buildings.
