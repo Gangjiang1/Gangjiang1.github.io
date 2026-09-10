@@ -209,14 +209,61 @@ A comprehensive guideline for prompt engineering of LLMs in automated building e
 
 <!-- Right Column -->
 <div style="flex: 0 0 420px; text-align: right;">
-  <figure style="margin: 0;">
-    <img src="/images/graphic.png" alt="Illustration of LLM for Auto-building modeling" width="420px" style="max-width: 100%; height: auto; border-radius: 10px;">
-    <figcaption style="font-size: 14px; color: #666; margin-top: 8px; padding-left: 1.5em;">
+<!-- Figure 1 -->
+
+  <figure style="margin: 0 0 24px 0; text-align: center;">
+    <img 
+      src="/images/graphic.png" 
+      alt="LLM-powered automated building modeling workflow"
+      style="
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      ">
+    <figcaption style="font-size: 13px; color: #666; margin-top: 8px; line-height: 1.4;">
       <em>Figure: LLM-Powered Auto-Building Modeling Workflow</em>
+    </figcaption>
+  </figure>
+  
+  <figure style="margin: 0 0 24px 0; text-align: center;">
+    <img 
+      src="/images/scenarios.png" 
+      alt="Complex building energy modeling scenarios"
+      style="
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      ">
+    <figcaption style="font-size: 13px; color: #666; margin-top: 8px; line-height: 1.4;">
+      <em>Figure: Complex Building Modeling Scenarios</em>
+    </figcaption>
+  </figure>
+  
+  <figure style="margin: 0; text-align: center;">
+    <img 
+      src="/images/multimodal.png" 
+      alt="Multimodal automated building energy modeling"
+      style="
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      ">
+    <figcaption style="font-size: 13px; color: #666; margin-top: 8px; line-height: 1.4;">
+      <em>Figure: Multimodal Automated Building Energy Modeling</em>
     </figcaption>
   </figure>
 </div>
 </div>
+
 
 ## 🔬 Experience
 🚀 Currently, I am collaborating with [Dr. Zheng O'Neill](https://engineering.tamu.edu/mechanical/profiles/oneill-zheng.html) to advance the frontiers of AI in buildings.
