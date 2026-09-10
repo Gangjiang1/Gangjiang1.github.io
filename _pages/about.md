@@ -185,12 +185,27 @@ redirect_from:
 <!-- Left Column -->
 <div style="flex: 1 1 300px; min-width: 280px;">
 <br>  
-<a href="https://github.com/Gangjiang1/EPlus-LLM" target="_blank"><strong>EPlus-LLMv1/v2</strong></a>:  
-LLM-driven automatic building energy modeling through natural language.  
+<a href="https://github.com/Gangjiang1/SCAle-BEM" target="_blank"><strong>SCAle-BEM</strong></a>:  
+Self- and Cross-Consistent Agentic-LLM-Based Framework for Multimodal Automated Building Energy Modeling.  
+<br><br>  
+<a href="https://github.com/Gangjiang1/LLM-BEM-Engineer_Benchmark" target="_blank"><strong>LLM-BEM-Engineer Benchmark</strong></a>:  
+A scalable and robust benchmark for automated building energy model generation.  
+<br><br>  
+<a href="https://huggingface.co/GangJiang/LLM-BEM-Engineer" target="_blank"><strong>LLM-BEM-Engineer</strong></a>:  
+An LLM-based AI engineer for automated building energy modeling and analysis.  
+<br><br>  
+<strong>EPlus-LLMv2</strong>:  
+New version of EPlus-LLM for more complex building modeling scenarios, e.g., building geometries, operation settings, and human behaviors.  
+(<a href="https://huggingface.co/EPlus-LLM/EPlus-LLMv2" target="_blank">HuggingFace</a>; <a href="https://github.com/Gangjiang1/EPlus-LLM" target="_blank">GitHub</a>)  
+<br><br>  
+<strong>EPlus-LLM</strong>:  
+LLM-driven computing platform for automated building energy modeling through natural language.  
+(<a href="https://huggingface.co/EPlus-LLM/EPlus-LLMv1" target="_blank">HuggingFace</a>; <a href="https://github.com/Gangjiang1/EPlus-LLM" target="_blank">GitHub</a>)  
 <br><br>  
 <a href="https://github.com/Gangjiang1/Prompting-for-Auto-building-Modeling" target="_blank"><strong>Prompting LLMs for ABEM</strong></a>:  
-A comprehensive guideline for prompt engineering of LLMs in auto-building energy modeling.
+A comprehensive guideline for prompt engineering of LLMs in automated building energy modeling for real-world applications.
 </div>
+
 
 <!-- Right Column -->
 <div style="flex: 0 0 420px; text-align: right;">
